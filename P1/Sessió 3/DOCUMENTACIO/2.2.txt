@@ -1,0 +1,1 @@
+4: wlan1: <BROADCAST,MULTICAST> mtu 1500 qdisc noqueue state DOWN group default qlen 1000

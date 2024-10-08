@@ -1,0 +1,82 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-03-07 10:38 CET
+Nmap scan report for www.google.com (142.250.184.4)
+Host is up (0.0030s latency).
+Other addresses for www.google.com (not scanned): 2a00:1450:4003:808::2004
+rDNS record for 142.250.184.4: mad41s10-in-f4.1e100.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+53/tcp  open  tcpwrapped
+80/tcp  open  http       gws
+443/tcp open  ssl/https  gws
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.93%I=7%D=3/7%Time=65E98B32%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,32F4,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2007\x20Mar\x20202
+SF:4\x2009:39:23\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private,\x2
+SF:0max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\r\nCont
+SF:ent-Security-Policy-Report-Only:\x20object-src\x20'none';base-uri\x20's
+SF:elf';script-src\x20'nonce-XiWd_isdeSxJygn6LbVJdw'\x20'strict-dynamic'\x
+SF:20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:\x20http
+SF::;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r\nServer
+SF::\x20gws\r\nX-XSS-Protection:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nSet-Cookie:\x20AEC=Ae3NU9MWfnC-4O68991Z-kL62eKN9kY_WkZnFOglcc1-ZeY5kx2
+SF:K9422GBw;\x20expires=Tue,\x2003-Sep-2024\x2009:39:23\x20GMT;\x20path=/;
+SF:\x20domain=\.google\.com;\x20Secure;\x20HttpOnly;\x20SameSite=lax\r\nAc
+SF:cept-Ranges:\x20none\r\nVary:\x20Accept-Encoding\r\n\r\n<!doctype\x20ht
+SF:ml><html\x20itemscope=\"\"\x20itemtype=\"http://schema\.org/WebPage\"\x
+SF:20lang=\"es\"><head><meta\x20content=\"Google\.es\x20permite\x20acceder
+SF:\x20a\x20la\x20informaci\xf3n\x20mundial\x20en\x20castellano,\x20catal\
+SF:xe1n,\x20gallego,\x20euskara\x20e\x20ingl\xe9s\.\"\x20name=\"descriptio
+SF:n\"")%r(HTTPOptions,70F,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r
+SF:\nAllow:\x20GET,\x20HEAD\r\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:39
+SF::23\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nServer:\x
+SF:20gws\r\nContent-Length:\x201592\r\nX-XSS-Protection:\x200\r\nX-Frame-O
+SF:ptions:\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x2
+SF:0\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content
+SF:=\"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\
+SF:x20<title>Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x20
+SF:\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/
+SF:22px\x20arial,sans-serif}html{background:#fff;color:#222;padding:15px}b
+SF:ody{margin:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30p
+SF:x\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.com/image
+SF:s/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p
+SF:{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-decoratio
+SF:n:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-width:772px\)
+SF:{body{background:none;margin-top:0;max-width:none;padding-right:0}}#l");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.93%T=SSL%I=7%D=3/7%Time=65E98B38%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,2094,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2007\x20Mar
+SF:\x202024\x2009:39:29\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20priv
+SF:ate,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\
+SF:r\nContent-Security-Policy-Report-Only:\x20object-src\x20'none';base-ur
+SF:i\x20'self';script-src\x20'nonce-jYJCcR4JoJ2Syjso4dz_7Q'\x20'strict-dyn
+SF:amic'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:\
+SF:x20http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r\
+SF:nP3P:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/
+SF:p3phelp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protectio
+SF:n:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cookie:\x20AEC=Ae3NU9O
+SF:HaGO3dAxnnoC98D_qUYqRVWMFWd0oyrD8jUUcwHsxv8f_eonBog;\x20expires=Tue,\x2
+SF:003-Sep-2024\x2009:39:29\x20GMT;\x20path=/;\x20domain=\.google\.com;\x2
+SF:0Secure;\x20HttpOnly;\x20SameSite=lax\r\nSet-Cookie:\x20__Secure-ENID=1
+SF:8\.SE=CqJrD3xdz4KlG282u2tcWu_mA6rVcei4b10pLq7oDIsLqvGiV4m3ggsK2MdG3WYY4
+SF:a2H2dQNesV4gtCv2xYHlOL1j1_9uZLzgZPqD1XQXbD0KScm3yc26Mdfz6t2Yj8KyzwJMpHr
+SF:4_lVgzBNAL3Nvc2cL1NQk9u9Oi0er9N1v")%r(HTTPOptions,748,"HTTP/1\.0\x20405
+SF:\x20Method\x20Not\x20Allowed\r\nAllow:\x20GET,\x20HEAD\r\nDate:\x20Thu,
+SF:\x2007\x20Mar\x202024\x2009:39:29\x20GMT\r\nContent-Type:\x20text/html;
+SF:\x20charset=UTF-8\r\nServer:\x20gws\r\nContent-Length:\x201592\r\nX-XSS
+SF:-Protection:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\nAlt-Svc:\x20h3=\
+SF:":443\";\x20ma=2592000,h3-29=\":443\";\x20ma=2592000\r\n\r\n<!DOCTYPE\x
+SF:20html>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<m
+SF:eta\x20name=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\
+SF:x20width=device-width\">\n\x20\x20<title>Error\x20405\x20\(Method\x20No
+SF:t\x20Allowed\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0
+SF:;padding:0}html,code{font:15px/22px\x20arial,sans-serif}html{background
+SF::#fff;color:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390
+SF:px;min-height:180px;padding:30px\x200\x2015px}\*\x20>\x20body{backgroun
+SF:d:url\(//www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20
+SF:no-repeat;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidde
+SF:n}ins{color:#777;text-decoration:none}a\x20img{border:0}@media\x20scree
+SF:n\x20and\x20\(max-width:772px\){body{backgr");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 73.41 seconds

@@ -1,0 +1,584 @@
+﻿Pràctica 1 - Interfícies de xarxa.
+  Sessió 4 - Anàlisi de la xarxa.
+
+
+Alumnes:
+Eric Millan Lombarte
+Marc Pascual Desentre
+
+
+Nota: Hem dividit les evidencias en carpetas segons el seu exercici, perquè sigui més fàcil trobar-les.
+
+
+
+
+ 1 - Monitorització (tcpdump).
+    - Com es pot saber quines interfícies es poden monitoritzar amb tcpdump?
+
+apt install tcpdump
+
+
+Amb la opció -D, imprimeix totes les interficies red disponibles en el sistema. El problema es que surten les que no estan actives també. Llavors grepeem per la paraula Running
+
+
+tcpdump -D | grep Running
+
+
+Evidència d'ús:
+            1.1.txt
+Després he provat ha fer tcpdump -i de totes les interfícies que surten i veiem que si es poden monitoritzar.
+
+
+
+
+- Com es captura i desa tràfic en fitxers consecutius compatibles amb whireshark i comprimits cada 60 segons?
+
+
+Amb l'opció -G podem configurar cada quants segons rota el ficher guardat amb nom -w.
+Amb l'opció -W determinem quan fitxers volem que es generin.
+Si volem diferents  fitxers podem posar que el nom sigui capture-%m%d%H%M%S.pcap, perquè cada 60 segons es generi un diferent amb la fecha del dia que executem la comanda.
+Hem utilitzat la comanda -Z root perquè el executi com root(si no no ens funcionaba)
+
+
+tcpdump  -G 60 -W 2 -w prova1.2-%m%d%H%M%S.pcap -Z root
+
+
+
+
+
+
+
+
+Evidència d'ús:
+1.2 .pcap Veiem que hi ha dos fitxers i si ens fixem veiem que efectivament han passat 60 segons entre els dos fitxers. El contingut del fitxer son paquets ICMP que estaba enviant a la màquina.
+
+
+- Com es captura i desa tràfic en un fitxer compatible amb whireshark d'una mide de 10MB?
+
+
+Utilitzarem la següent comanda per capturar els paquets d’una interfície i guardar la captura en un fitxer de 10 MB.
+
+
+tcpdump  -C 10 -W 1 -w prova_1_3.pcap -Z root
+.
+Amb el -C 10 indiquem la mesura del fitxer a 10 MB
+Amb l’opció -W 1 indiquem que només capturem dos fitxers.
+Finalment amb l’opció -w prova_1_3.pcap guardem la captura en un fitxer que anomenem prova_1_3.pcap
+Hem utilitzat la comanda -Z root perquè el executi com root(si no no ens funcionaba)
+
+
+Evidència d'ús:
+prova_1_3.cap: Com veiem el fitxer te una mida de 10 MB. per fer això hem fet ping -i 0.0001 de la ip de la interfaz de la meva màquina.
+
+
+- Com es captura un cert nombre de paquets?
+
+
+Per realitzar una captura fins un cert nombre de paquets cal utilitzar l’opció -c [num de paquets]
+Per exemple podem fer:
+
+
+tcpdump -c 100 -w prova_1_4.pcap -Z root
+
+
+
+
+Evidència d'ús:
+
+
+Tenim la captura realizada en el fitxer prova_1_4.pcap.
+Podem veure si obrim el fitxer en el wireshark que hi han 100 paquets.
+
+
+
+
+- Com es capturen tots els bytes de dades dels paquets?
+De manera estàndard tcpdump captura els paquets de 262144.
+Per realitzar una captura que capturi tots els bytes de dades els paquets cal utilitzar l'opció -s. Tot seguit cal posar el següent número → 65535
+Aquest número equivale a 64 KB, que es la mesura màxima permitida per un paquet ip. De totes formes tcpdump permet posar el número que vulguis.
+
+
+tcpdump -s 65535 -w prova_1.5.pcap
+
+
+Evidència d'ús:
+
+
+Tenim la captura realizada en el fitxer prova_1_5.pcap. El primer de tot veiem que al executar la comanda posa snapshot length 65535 bytes. És a dir captura els bytes correctes. 
+Després mentres capturaven trafic hem enviat desde una altre maquina un ping amb el tamany màxim fent → ping -s 65505 [ip].  Si obrim el wireshark veiem que encara que capturem els 65535 en el wireshark surt els paquets fragmentats pero amb tota la informació. 
+També he provat a rebre els paquets amb -s 0 i si obrim el wireshark veiem que estan els paquets pero en la info del paquet posa(“Paquet size limeted during capture”)(prova_1.5.2.pcap)
+
+
+
+
+- Com es captura tràfic d'una interfície?
+
+
+tcpdump -i enp0s3 -w prova_1_6.pcap
+
+
+Evidència d'ús:
+Primer de tot he fet una captura de paquets fent ping a un altre interfaz(enp0s8). (prova_1.6.pcap) i veiem que capturem paquets de resposta de la ip de la interfaz enp0s8[10.0.2.9] només això és perquè al estar utilitzant una xarxa Nat, a causa del enrutament encara que fem ping a enp0s8 podem veure com enp0s8 envia paquets a enp0s3 i aquest és el tràfic que finalment capturem.
+
+Si directament fem ping a enp0s3 veiem que no només hi han paquet de reply si no també de request.(prova_1_6_2.pcap)
+En els dos casos veiem que només veiem els paquets que rep o envia enp0s3[10.0.2.4]
+
+
+
+
+- Com es captura tràfic d'una adreça MAC concreta?
+
+
+tcpdump ether host <adreça_MAC> -w tràfic.pcap
+
+
+Evidència d'ús:
+prova_1.7.pcap, he posat la MAC de la interficie enep0s3 que te com a ip 10.0.2.4 y com podem veure en la captura del wireshark en tots els paquets surt aquesta ip com source o destination. y mentres capturaba estaba fent ping a la ip  10.0.2.4.
+
+
+- Com es captura tràfic d'una adreça IP concreta?
+
+
+tcpdump  host <adreça_IP> -w tràfic.pcap
+
+
+
+
+Evidència d'ús:
+prova_1.8.pcap, he posat la ip de la interficie enep0s3 i com podem veure en la captura del wireshark en tots els paques surt aquesta ip com a source o destination.
+
+
+- Com es captura tràfic entre una adreça IP1 i les adreces IP2 o IP3?
+ tcpdum 'host IP1 and ( host IP2 or host IP3)' -w prova_1_9.pcap 
+
+
+Evidència d'ús:
+prova_1.9.pcap: he posat la seguent comanda, tcpdum 'host 10.0.2.8 and ( host 10.0.2.4 or host 10.0.2.10)'. 
+I he fet ping desde 3 interfaces (amb ping -I [interfaz] )desde enp0s3(10.0.2.4) , enp0s8(10.0.2.10), enp0s9(10.0.2.11). I podem veure que nomes surten paquets entre 10.0.2.8 i (10.0.2.4 o 10.0.2.10).
+
+
+- Com es captura tràfic IP entre una adreça IP1 i qualsevol altre menys IP2?
+
+
+tcpdump 'host IP1 and not host IP2' -w prova_1_10.pcap 
+
+
+Evidència d'ús:
+prova_1.10.pcap: he posat la seguent comanda, tcpdump 'host 10.0.2.8 and not host 10.0.2.10' -w prova_1_10.pcap. 
+I he fet ping desde 2 interfaces: enp0s3(10.0.2.4) , enp0s8(10.0.2.10). Y en la captura podem veure que surt no surt els paquets de 10.0.2.10, surten tots els demès com per exemple la ip 10.0.2.4 o altres ips com 10.0.2.9.
+
+
+
+
+- Com es captura tràfic IP que provingui o s'adreci d'una certa xarxa?
+tcpdump 'net [adreça de xarxa/mask]' -w prova_1_11.pcap 
+Evidència d'ús:
+prova_1._11.pcap:He posat → tcpdump 'net 10.0.2.0/24' -w prova_1_11.pcap 
+
+
+ He fet ping desde 10.0.2.10 i desde 10.0.2. I com veiem en la captura de wireshark només surten paquets de la net 10.0.2.0/24
+
+
+- Com es captura tràfic IP que no provingui o s'adreci d'una certa xarxa?
+tcpdump 'not net [adreça de xarxa/mask]' -w prova_1_12.pcap 
+
+
+Evidència d'ús:
+prova_1._12.pcap:He posat → tcpdump 'net 10.0.2.0/24' -w prova_1_12.pcap 
+He fet ping desde 10.0.2.10 i desde 10.0.2.8 i també he fet desde la maquina que estaba fent la captura wget google.es. I com veiem no em capturat cap paquet ja que totes les adreces estan en el rang de 10.0.2.0/24.
+- Com es captura tràfic d'un cert port TCP?
+tcpdump 'tcp port [port]' -w prova_1_13.pcap
+Evidència d'ús:
+prova_1._13.pcap. He posat → tcpdump 'tcp port 80' -w prova_1_13.pcap.
+I per comprovar que només rebia trafic per el port 80 desde una altre maquina que tenia connexió he fet wget http://10.0.2.8:80. on 10.0.2.8 es la ip de una interfaç on estic capturant paquets. I veiem que surt en la captura el intent de syncronitzar-se pero falla( ya que no tinc cap servidor http)
+
+
+
+
+- Com es capturen només les peticions DNS d'una IP a Google (8.8.8.8)?
+
+
+Hem posat port 53 ya que és el port defecte utilitzat per DNS.
+
+
+tcpdump dst host 8.8.8.8 and port 53 -w prova_1_14.pcap
+
+
+Evidència d'ús:
+prova_1_14.pcap: He capturat i he fet varies consultes amb la comanda dig [ip o domini] @8.8.8.8. Podem veure totes les querys que he fet en la captura del wireshark i només surt la petició no la resposta.
+
+
+
+
+ 2 - Identificació d'equips i serveis (nmap).
+- Com s'escaneja un conjunt d'adreces ip?
+
+
+Podem escanejar una ip / un conjunt d’ip amb la següent comanda:
+Per 1 IP → nmap 10.0.2.15
+Per 2 IP → nmap 10.0.2.15 10.0.3.15
+I així amb totes les ip que vulguis escanejar.
+
+
+Evidència d'ús:
+
+
+Hem habilitat 3 interficies virtuals per realitzar les proves. 
+Per veure les seves ip realitzem amb la comanda → ip addr | grep “inet “
+Guardem les ip en l’arxiu ip_2.1.txt
+Amb la comanda → nmap 10.0.2.15 10.0.3.15 10.0.4.15
+Guardem la captura en l’arxiu nmap_2.1.txt
+
+
+
+
+- Com s'escaneja un llistat d'adreces ip d'un fitxer?
+
+
+nmap -iL /root/documentacion/fitxer_ip_2.2.txt
+
+
+Evidència d'ús:
+
+
+Guardem el fitxer d’ip utilitzat en l’arxiu fitxer_ip_2.2.txt
+Guardem la captura en l’arxiu nmap_2.2.txt
+ 
+- Com s'escaneja els equips actius d'una xarxa?
+
+
+Primer necessitem saber la ip de la xarxa que volem escanejar. Per realitzar les proves utilitzarem la nostre xarxa NAT amb ip 10.0.2.0/24
+
+
+Amb la comanda nmap -sn 10.0.2.0/24 podem escanejar els equips actius en la nostre xarxa nat, i podem veure que tenim 4 hosts actius.
+
+
+Evidència d'ús:
+
+
+Per veure les ip dels equips realitzem amb la comanda → ip addr | grep “inet “
+Guardem les ip en l’arxiu ip_2.3.txt
+Amb la comanda → nmap -sn 10.0.2.0/24 
+Guardem la captura en l’arxiu nmap_2.3.txt
+També hem realitzat un escaneig a la xarxa de google → nmap_google.2.3.txt
+
+
+- Com s'escaneja els serveis actius d'una xarxa?
+
+
+Per poder escanejar els serveis actius d’una xarxa, nmap intenta realitzar connexions als ports de la xarxa destí. Si estableix una connexió, depenent del port realitza una serie de requests per determinar quin tipus de servei está disponible en el port.
+
+
+nmap -sV 10.0.2.0/24
+nmap -sV www.google.com
+
+
+Evidència d'ús:
+Hem guardat el fitxer resultant del escaneig de la nat en l’arxiu → nat_2.4.txt
+També hem realitzat una prova amb nmap -sV www.google.com → google_2.4.txt
+
+
+
+
+- Com s'escaneja normalment els ports TCP i UDP d'un equip?
+
+
+Per poder escanejar els ports TCP podem utilitzar l’opció -sT, igualment per escanejar els ports UDP podem utilitzar l’opció -sU.
+
+
+nmap -sT 10.2.0.15   
+nmap -sU 10.2.0.15    
+
+
+Evidència d'ús:
+Hem utilitzat dos ip diferents per realitzar les proves, 10.2.0.15 i www.google.com
+Hem guardat el fitxer resultant del escaneig dels ports TCP en  → 
+tcp_2.5.txt
+tcp_google_2.5.txt
+Hem guardat el fitxer resultant del escaneig dels ports UDP en  →         
+udp_2.5.txt
+udp_google.2.5.txt
+
+
+- Com s'escaneja la totalitat de ports TCP d'un equip?
+Amb l’opció -p- podem escanejar la totalitat de ports TCP d’un equip.
+nmap -p- 10.0.2.0/24 
+tarda un huevo en hacer la comanda
+
+
+Evidència d'ús:
+2.6.txt
+
+
+- Com es pot gestionar el nivell de detall de la sortida?
+
+
+El nivell de detall es pot gestionar amb les següents opcions, -v per veure una sortida detallada, -vv per veure una sortida encara més detallada i --reason per veure més informació del estat dels ports.
+
+
+nmap  10.2.0.15
+nmap -v 10.2.0.15
+nmap -vv 10.2.0.15
+nmap -- reason 10.2.0.15
+
+
+Evidència d'ús:
+normal_2.7.txt
+detallat_2.7.txt
+mes_detallat_2.7.txt
+ports_detallat_2.7.txt
+
+
+- Com es pot gestionar la velocitat d'escaneig?
+
+
+Nmap ja té unes plantilles d’escaneig preestablertes. Amb l’opció -T[0-5] podem moderar la velocitat d’escaneig. Desde l’opció -T0 fins la -T5 es va incrementant la velocitat d’escaneig sacrificant la precisió de l'anàlisi i la precaució. 
+
+
+Evidència d'ús:
+Provem els tres casos més ràpids, T3, T4 i T5.
+
+
+t3_2.8.txt → nmap -T3 10.0.2.15
+t4_2.8.txt → nmap -T4 10.0.2.15
+t5_2.8.txt → nmap -T5 10.0.2.15
+
+
+
+
+- Com es pot incorporar la traça de la ruta en un escaneig?
+Per incorporar la traça de la ruta en el escaneig cal utilitzar l’opció --traceroute.
+
+
+nmap --traceroute www.google.com
+
+
+Evidència d'ús:
+2.9.txt
+
+
+
+
+- Com es desa el resultat d'un escaneig en un fitxer?
+
+
+Tenim dos solucions possibles, redireccionar la sortida o utilitzar l’opció -oN.
+nmap 10.0.2.15 >salida.txt
+nmap -oN salida.txt 10.0.2.15
+
+
+Evidència d'ús:
+nmap 10.0.2.15 >2.10.1.txt
+nmap -oN  2.10.2.txt 10.0.2.15
+
+
+
+
+- Com s'escaneja amb i sense resolució de noms?
+
+
+Nmap té per defecte que realitza la resolució de noms a vegades. Si vols escanejar sempre amb la resolució de noms tenim la opció -R. Si vols que mai realitzi la resolució de noms, tenim l’opció -n.
+
+
+Evidència d'ús:
+r_2.11.txt → nmap -R www.google.com
+n_2.11.txt → nmap -n www.google.com
+
+
+- Com s'escaneja un equip per una determinada interfície?
+
+
+Amb l’opció -e interfície, podem escanejar un equip mitjançant la interfície que posem.
+nmap -e enp0s3 www.google.com
+
+
+Evidència d'ús:
+2.12.txt → nmap -e enp0s3 www.google.com
+
+
+
+
+- Com s'escaneja un equip per un determinat port d'origen?
+
+
+Amb l’opció --source-port [port], podem escanejar un equip amb el port d’origen desitjat.
+nmap --source-port 8080 10.0.2.0/24
+
+
+Evidència d'ús:
+2.13.txt → nmap --source-port 8080 10.0.2.0/24
+
+
+
+
+- Com s'escaneja el sistema operatiu d'un equip?
+
+
+nmap -O 10.0.2.15 | grep “Os details” | “OS details: ” 
+
+
+Evidència d'ús:
+2.14.txt → nmap -O 10.0.2.15 | grep “Os details” | “OS details: ” 
+ 
+
+
+- Com s'escaneja enviant paquets a nivell IP o Ethernet?
+
+
+Per poder escanejar enviant paquets a nivell IP o Ethernet, utilitzem l’opció --send-ip i --send-eth.
+
+
+nmap --send-ip www.google.com
+nmap --send-eth www.google.com
+
+
+Evidència d'ús:
+ip_2.15.txt → nmap --send-ip www.google.com
+eth_2.15.txt → nmap --send-eth www.google.com
+
+
+
+
+- Com s'identifiquen els scripts que es poden utilitzar amb nmap?
+
+
+Dins la nostre maquina virtual tenim un directori en la ruta → /usr/share/nmap/scripts/ Dins d’aquest directori tenim tots els scripts que poden utilitzar amb la comanda nmap.
+Tenen un format .nse
+
+
+- Com s'executa un script per detectar si una adreça IP té la interfície en mode promiscu?
+
+
+Dins el directori /usr/share/nmap/scripts/ tenim un script anomenat sniffer-detect.nse
+Amb aquest script podem detectar si la adreça IP té la interfície en mode promiscu.
+
+
+Evidència d'ús:
+Primer cal anar a la ruta següent → /usr/share/nmap/scripts/
+Ejecutem la següent comanda:
+2.16.txt → nmap --script sniffer-detect.nse 10.0.2.0/24
+
+
+
+
+
+
+
+
+
+
+3 - Rendiment de la xarxa (iperf3).
+
+
+apt install iperf3
+I hem posat que no s’executi com a daemon.
+
+
+- Com es pot avaluar que es pot assolir una certa velocitat de transmissió d'un servidor a un client?
+Per fer que el servidor envii paquets hem de fer.
+En una maquina(seax2) creem el servidor → iperf3 -s
+En una altre maquina (seax3) fem → iperf3 -c [ip_servidor] -R; amb la comanda -R fem que el servidor envii al client.
+i podem limitar el bitrate tant del client (--bitrate o -b) com del servidor (--server-bitrate-limit).
+
+
+Evidència d'ús:
+3.1.txt. He executat la comanda iperf3 -s > 3.1.txt, i me conectat amb un altre maquina fent → iperf3 -c 10.0.2.4 -R -b 1M.
+I podem veure que la velocitat de transmissio del servidor al client es de 1Mbits/s. I que efectivament el servidor fa de sender.
+
+
+- Com es pot avaluar que es pot assolir una certa velocitat de transmissió d'un client a un servidor?
+Per fer que el client envii paquets hem de fe es el estandardr.
+En una maquina(seax2) creem el servidor → iperf3 -s
+En una altre maquina (seax3) fem → iperf3 -c [ip_servidor];
+i podem limitar el bitrate tant del client (--bitrate o -b) com del servidor (--server-bitrate-limit).
+
+
+Evidència d'ús:(3.2.txt)
+He executat la comanda iperf3 -s 
+I me conectat amb un altre maquina fent → iperf3 -c 10.0.2.4  -b 1M >3.2.txt.
+Podem veure que el client ha enviat els paquets amb una velocitat de 1Mbps. 
+Si adjutes el output del client podem veure com el servidor posa reciever.
+
+
+
+
+
+
+- Com es pot esbrinar la velocitat màxima de transmissió d'un servidor a un client?
+
+
+Per esbrinar la velocitat maxima podem fer desde el client tenint un servidor obert( iperf -s )
+Desde el client iperf -c [ip server] -b [Valor molt alt].
+Evidència d'ús: (3.3.txt)
+He posat la comanda seguent t iperf -c 10.0.2.4 -b 10G -R.
+i veiem que surt que com a màxim te una velocitat de transmissio de 2,02 Gbits/s aproximadament desde el output del servidor.
+
+
+- Com es pot esbrinar la velocitat màxima de transmissió d'un client a un servidor?
+
+
+Per esbrinar la velocitat màxima podem fer desde el client tenint un servidor obert( iperf -s )
+Desde el client iperf -c [ip server] -b [Valor molt alt].
+
+
+Evidència d'ús: (3.4.txt)
+He posat la comanda seguent t iperf -c 10.0.2.4 -b 10G.
+i veiem que surt que com a màxim te una velocitat de transmissio de 2,08 Gbits/s aproximadament
+
+
+
+
+    
+
+
+
+
+
+
+
+
+4 - Informació de l'entitat propietària (whois).
+
+
+Primer de tot hem de instalar el whois fent → apt-get install whois
+- Com s'obté informació whois d'una adreça IP des de la línia de comandes?
+
+
+whois <adreça_IP>
+
+
+Evidència d'ús: (4.1txt)
+Jo he fet wget -qO- ifconfig.me, i desprès he fet whois de la meva ip publica
+whois 91.116.33.13. Com podem veure en la evidencia podem extreure molta informació com el rang d’adreces, el nom de la xarxa, l'adreça, entre altres.
+
+
+- Com s'obté informació whois d'un domini des de la línia de comandes?
+whois <nomDomini>
+
+
+Evidència d'ús: (4.2.txt)
+He fet whois google.com. Y veiem que ens surt molta informació com la id del domini, la data de creació del domini, entre altres.
+
+
+- Com s'obté l'adreça de xarxa a que pertany una certa adreça IP?
+Per obtenir l’adreça de xarxa filtrem per inetnum, i ens quedem el primer valor del rang de xarxa, que coincideix amb l’adreça de xarxa
+
+
+whois <adreça_IP> | grep inetnum | awk ‘{printf $2}’
+
+
+Evidència d'ús: (4.3.txt)
+He fet → whois 91.116.33.13  | grep inetnum | awk ‘{printf $2}’. Podem veure que ens surt l’adreça de xarxa
+
+
+
+
+- Com s'obté el nom de l'organització a la que pertany una certa adreça IP?
+Entenem que el nom de l’organització es el camp netname, llavors hem fet
+
+
+whois 91.116.33.13 | grep netname | awk ‘{printf $2}’
+
+
+Evidència d'ús: (4.4.txt)
+El output de la comanda de adalt. Veiem que en el meu cas diu que l'organització es EUSKALTEL-FTTH.

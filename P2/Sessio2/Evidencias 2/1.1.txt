@@ -1,0 +1,10 @@
+ii  libldb2:amd64                  2:2.6.2+samba4.17.12+dfsg-0+deb12u1 amd64        LDAP-like embedded database - shared library
+ii  python3-ldb                    2:2.6.2+samba4.17.12+dfsg-0+deb12u1 amd64        Python 3 bindings for LDB
+ii  python3-samba                  2:4.17.12+dfsg-0+deb12u1            amd64        Python 3 bindings for Samba
+ii  samba                          2:4.17.12+dfsg-0+deb12u1            amd64        SMB/CIFS file, print, and login server for Unix
+ii  samba-ad-provision             2:4.17.12+dfsg-0+deb12u1            all          Samba files needed for AD domain provision
+ii  samba-common                   2:4.17.12+dfsg-0+deb12u1            all          common files used by both the Samba server and client
+ii  samba-common-bin               2:4.17.12+dfsg-0+deb12u1            amd64        Samba common files used by both the server and the client
+ii  samba-dsdb-modules:amd64       2:4.17.12+dfsg-0+deb12u1            amd64        Samba Directory Services Database
+ii  samba-libs:amd64               2:4.17.12+dfsg-0+deb12u1            amd64        Samba core libraries
+ii  samba-vfs-modules:amd64        2:4.17.12+dfsg-0+deb12u1            amd64        Samba Virtual FileSystem plugins

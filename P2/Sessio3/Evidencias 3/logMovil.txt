@@ -1,0 +1,75 @@
+[abr 23, 2024, 20:39:19] Server poll timeout, trying next remote entry...
+
+[abr 23, 2024, 20:39:19] EVENT: RECONNECTING
+
+[abr 23, 2024, 20:39:19] Contacting 10.0.2.4:1193 via UDP
+
+[abr 23, 2024, 20:39:19] EVENT: RESOLVE
+
+[abr 23, 2024, 20:39:19] EVENT: WAIT
+
+[abr 23, 2024, 20:39:19] Connecting to [10.0.2.4]:1193 (10.0.2.4) via UDP
+
+[abr 23, 2024, 20:39:26] EVENT: CANCELLED
+
+[abr 23, 2024, 20:39:26] EVENT: DISCONNECTED
+
+[abr 23, 2024, 20:39:26] Tunnel bytes per CPU second: 0
+
+[abr 23, 2024, 20:39:26] ----- OpenVPN Stop -----
+
+[abr 23, 2024, 20:39:26] EVENT: CORE_THREAD_DONE
+
+[abr 23, 2024, 20:39:27] ----- OpenVPN Start -----
+
+[abr 23, 2024, 20:39:27] EVENT: CORE_THREAD_ACTIVE
+
+[abr 23, 2024, 20:39:27] OpenVPN core 3.8.4connectX(3.git::c424d46c:RelWithDebInfo) android arm64 64-bit PT_PROXY
+
+[abr 23, 2024, 20:39:27] Frame=512/2112/512 mssfix-ctrl=1250
+
+[abr 23, 2024, 20:39:27] NOTE: This configuration contains options that were not used:
+
+[abr 23, 2024, 20:39:27] Unsupported option (ignored)
+
+[abr 23, 2024, 20:39:27] 4 [resolv-retry] [infinite]
+
+[abr 23, 2024, 20:39:27] 6 [persist-key]
+
+[abr 23, 2024, 20:39:27] 7 [persist-tun]
+
+[abr 23, 2024, 20:39:27] 13 [auth-nocache]
+
+[abr 23, 2024, 20:39:27] 15 [data-ciphers] [AES-256-CBC]
+
+[abr 23, 2024, 20:39:27] Contacting 10.0.2.4:1193 via UDP
+
+[abr 23, 2024, 20:39:27] Connecting to [10.0.2.4]:1193 (10.0.2.4) via UDP
+
+[abr 23, 2024, 20:39:27] EVENT: RESOLVE
+
+[abr 23, 2024, 20:39:27] EVENT: WAIT
+
+[abr 23, 2024, 20:39:37] Server poll timeout, trying next remote entry...
+
+[abr 23, 2024, 20:39:37] EVENT: RECONNECTING
+
+[abr 23, 2024, 20:39:37] Contacting 10.0.2.4:1193 via UDP
+
+[abr 23, 2024, 20:39:37] EVENT: RESOLVE
+
+[abr 23, 2024, 20:39:37] EVENT: WAIT
+
+[abr 23, 2024, 20:39:37] Connecting to [10.0.2.4]:1193 (10.0.2.4) via UDP
+
+[abr 23, 2024, 20:39:47] Server poll timeout, trying next remote entry...
+
+[abr 23, 2024, 20:39:47] EVENT: RECONNECTING
+
+[abr 23, 2024, 20:39:47] Contacting 10.0.2.4:1193 via UDP
+
+[abr 23, 2024, 20:39:47] EVENT: RESOLVE
+
+[abr 23, 2024, 20:39:47] EVENT: WAIT
+
+[abr 23, 2024, 20:39:47] Connecting to [10.0.2.4]:1193 (10.0.2.4) via UDP

@@ -1,0 +1,1 @@
+mac80211             1175552  5 mt76,mt76x02_lib,mt76x02_usb,mt76x0_common,mt76x0u

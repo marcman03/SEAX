@@ -1,0 +1,6 @@
+dev tun0
+port 1193
+proto udp
+ifconfig 10.10.10.1 10.10.10.2
+secret /etc/openvpn/static.key
+cipher AES-256-CBC

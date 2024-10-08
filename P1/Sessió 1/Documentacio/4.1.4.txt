@@ -1,0 +1,18 @@
+PING 192.168.68.109 (192.168.68.109) 56(84) bytes of data.
+64 bytes from 192.168.68.109: icmp_seq=1 ttl=127 time=0.607 ms
+64 bytes from 192.168.68.109: icmp_seq=2 ttl=127 time=0.726 ms
+64 bytes from 192.168.68.109: icmp_seq=3 ttl=127 time=0.685 ms
+64 bytes from 192.168.68.109: icmp_seq=4 ttl=127 time=0.676 ms
+64 bytes from 192.168.68.109: icmp_seq=5 ttl=127 time=0.564 ms
+64 bytes from 192.168.68.109: icmp_seq=6 ttl=127 time=0.624 ms
+64 bytes from 192.168.68.109: icmp_seq=7 ttl=127 time=0.722 ms
+64 bytes from 192.168.68.109: icmp_seq=8 ttl=127 time=0.644 ms
+64 bytes from 192.168.68.109: icmp_seq=9 ttl=127 time=0.735 ms
+64 bytes from 192.168.68.109: icmp_seq=10 ttl=127 time=0.601 ms
+64 bytes from 192.168.68.109: icmp_seq=11 ttl=127 time=0.717 ms
+64 bytes from 192.168.68.109: icmp_seq=12 ttl=127 time=0.613 ms
+64 bytes from 192.168.68.109: icmp_seq=13 ttl=127 time=0.664 ms
+
+--- 192.168.68.109 ping statistics ---
+13 packets transmitted, 13 received, 0% packet loss, time 12246ms
+rtt min/avg/max/mdev = 0.564/0.659/0.735/0.053 ms

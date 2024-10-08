@@ -1,0 +1,237 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-03-07 10:42 CET
+Nmap scan report for _gateway (10.0.2.2)
+Host is up (0.0027s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+1042/tcp open  afrog?
+1043/tcp open  ssl/boinc?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1042-TCP:V=7.93%I=7%D=3/7%Time=65E98C20%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\r\nCon
+SF:tent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-Contro
+SF:l:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubDomains
+SF:\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy:\x20n
+SF:o-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/html;\x20
+SF:charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x20Mar\x
+SF:202024\x2009:42:56\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
+SF:tml>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\n<titl
+SF:e>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n</body
+SF:>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Content\r\nV
+SF:ary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-All
+SF:ow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\x200\r
+SF:\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:42:56\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,
+SF:2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n"
+SF:)%r(DNSStatusRequestTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCo
+SF:okie,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n
+SF:\r\n")%r(TLSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Probe,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1043-TCP:V=7.93%T=SSL%I=7%D=3/7%Time=65E98C2B%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\
+SF:r\nContent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-
+SF:Control:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubD
+SF:omains\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy
+SF::\x20no-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x2
+SF:0Mar\x202024\x2009:43:07\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYP
+SF:E\x20html>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\
+SF:n<title>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n
+SF:</body>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Conten
+SF:t\r\nVary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Contr
+SF:ol-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\
+SF:x200\r\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:43:07\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(FourOhFourRequest,2DA,"HTTP/1\.1\x20404\x20N
+SF:ot\x20Found\r\nVary:\x20Origin\r\nContent-Security-Policy:\x20default-s
+SF:rc\x20'self'\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043;script-
+SF:src\x20'self'\x20'unsafe-inline';style-src\x20'self';connect-src\x20'se
+SF:lf'\x20ws:\x20wss:\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043\x
+SF:20127\.0\.0\.1:9013\x20127\.0\.0\.1:9014;worker-src\x20'self'\x20blob:\
+SF:x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043;img-src\x20'self'\x20data:\x2
+SF:0blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043\r\nX-DNS-Prefetch-Cont
+SF:rol:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGI
+SF:N\r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubDomai
+SF:ns\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy:\x2
+SF:0no-referrer\r\nX-XSS-Protection:\x200\r\nDate:\x20Thu,\x2007\x20Mar\x2
+SF:02024\x2009:43:07\x20GMT\r\nConnection:\x20close\r\n\r\n");
+MAC Address: 52:54:00:12:35:02 (QEMU virtual NIC)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0034s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+1042/tcp open  afrog?
+1043/tcp open  ssl/boinc?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1042-TCP:V=7.93%I=7%D=3/7%Time=65E98C20%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\r\nCon
+SF:tent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-Contro
+SF:l:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubDomains
+SF:\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy:\x20n
+SF:o-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/html;\x20
+SF:charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x20Mar\x
+SF:202024\x2009:42:56\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
+SF:tml>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\n<titl
+SF:e>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n</body
+SF:>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Content\r\nV
+SF:ary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-All
+SF:ow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\x200\r
+SF:\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:42:56\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,
+SF:2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n"
+SF:)%r(DNSStatusRequestTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCo
+SF:okie,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n
+SF:\r\n")%r(TLSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Probe,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1043-TCP:V=7.93%T=SSL%I=7%D=3/7%Time=65E98C2B%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\
+SF:r\nContent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-
+SF:Control:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubD
+SF:omains\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy
+SF::\x20no-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x2
+SF:0Mar\x202024\x2009:43:07\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYP
+SF:E\x20html>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\
+SF:n<title>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n
+SF:</body>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Conten
+SF:t\r\nVary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Contr
+SF:ol-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\
+SF:x200\r\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:43:07\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(FourOhFourRequest,2DA,"HTTP/1\.1\x20404\x20N
+SF:ot\x20Found\r\nVary:\x20Origin\r\nContent-Security-Policy:\x20default-s
+SF:rc\x20'self'\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043;script-
+SF:src\x20'self'\x20'unsafe-inline';style-src\x20'self';connect-src\x20'se
+SF:lf'\x20ws:\x20wss:\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043\x
+SF:20127\.0\.0\.1:9013\x20127\.0\.0\.1:9014;worker-src\x20'self'\x20blob:\
+SF:x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043;img-src\x20'self'\x20data:\x2
+SF:0blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043\r\nX-DNS-Prefetch-Cont
+SF:rol:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGI
+SF:N\r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubDomai
+SF:ns\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy:\x2
+SF:0no-referrer\r\nX-XSS-Protection:\x200\r\nDate:\x20Thu,\x2007\x20Mar\x2
+SF:02024\x2009:43:07\x20GMT\r\nConnection:\x20close\r\n\r\n");
+MAC Address: 52:54:00:12:35:03 (QEMU virtual NIC)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.0.2.4
+Host is up (0.0027s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+1042/tcp open  afrog?
+1043/tcp open  ssl/boinc?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1042-TCP:V=7.93%I=7%D=3/7%Time=65E98C20%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\r\nCon
+SF:tent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-Contro
+SF:l:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubDomains
+SF:\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy:\x20n
+SF:o-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/html;\x20
+SF:charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x20Mar\x
+SF:202024\x2009:42:56\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
+SF:tml>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\n<titl
+SF:e>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n</body
+SF:>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Content\r\nV
+SF:ary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-All
+SF:ow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\x200\r
+SF:\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:42:56\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,
+SF:2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n"
+SF:)%r(DNSStatusRequestTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCo
+SF:okie,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n
+SF:\r\n")%r(TLSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Probe,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1043-TCP:V=7.93%T=SSL%I=7%D=3/7%Time=65E98C2B%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,27E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\
+SF:r\nContent-Security-Policy:\x20default-src\x20'self'\r\nX-DNS-Prefetch-
+SF:Control:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nStrict-Transport-Security:\x20max-age=15552000;\x20includeSubD
+SF:omains\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nReferrer-Policy
+SF::\x20no-referrer\r\nX-XSS-Protection:\x200\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=utf-8\r\nContent-Length:\x20139\r\nDate:\x20Thu,\x2007\x2
+SF:0Mar\x202024\x2009:43:07\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYP
+SF:E\x20html>\n<html\x20lang=\"en\">\n<head>\n<meta\x20charset=\"utf-8\">\
+SF:n<title>Error</title>\n</head>\n<body>\n<pre>Cannot\x20GET\x20/</pre>\n
+SF:</body>\n</html>\n")%r(HTTPOptions,D2,"HTTP/1\.1\x20204\x20No\x20Conten
+SF:t\r\nVary:\x20Origin,\x20Access-Control-Request-Headers\r\nAccess-Contr
+SF:ol-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\
+SF:x200\r\nDate:\x20Thu,\x2007\x20Mar\x202024\x2009:43:07\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,2
+SF:DA,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Origin\r\nContent-Secu
+SF:rity-Policy:\x20default-src\x20'self'\x20blob:\x20127\.0\.0\.1:1042\x20
+SF:127\.0\.0\.1:1043;script-src\x20'self'\x20'unsafe-inline';style-src\x20
+SF:'self';connect-src\x20'self'\x20ws:\x20wss:\x20blob:\x20127\.0\.0\.1:10
+SF:42\x20127\.0\.0\.1:1043\x20127\.0\.0\.1:9013\x20127\.0\.0\.1:9014;worke
+SF:r-src\x20'self'\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:1043;img-
+SF:src\x20'self'\x20data:\x20blob:\x20127\.0\.0\.1:1042\x20127\.0\.0\.1:10
+SF:43\r\nX-DNS-Prefetch-Control:\x20off\r\nExpect-CT:\x20max-age=0\r\nX-Fr
+SF:ame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=155
+SF:52000;\x20includeSubDomains\r\nX-Download-Options:\x20noopen\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nX-Permitted-Cross-Domain-Policies:\x20no
+SF:ne\r\nReferrer-Policy:\x20no-referrer\r\nX-XSS-Protection:\x200\r\nDate
+SF::\x20Thu,\x2007\x20Mar\x202024\x2009:43:07\x20GMT\r\nConnection:\x20clo
+SF:se\r\n\r\n");
+MAC Address: 52:54:00:12:35:04 (QEMU virtual NIC)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for seax1 (10.0.2.15)
+Host is up (0.0000020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.2p1 Debian 2+deb12u2 (protocol 2.0)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 46.46 seconds

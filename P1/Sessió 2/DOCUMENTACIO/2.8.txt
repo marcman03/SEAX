@@ -1,0 +1,6 @@
+PING 8.8.8.8 (8.8.8.8) 2000(2028) bytes of data.
+ping: local error: message too long, mtu=1500
+ping: local error: message too long, mtu=1500
+ping: local error: message too long, mtu=1500
+ping: local error: message too long, mtu=1500
+ping: local error: message too long, mtu=1500

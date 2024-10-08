@@ -1,0 +1,289 @@
+SEAX
+Pràctica 2 - Accés als recursos de xarxa
+Sessió 1 - Accés al servidor mitjançant SSH i SFTP
+
+Marc Gamboa Martin
+Marc Pascual Desentre
+
+1 - Verificació de les contrasenyes utilitzades
+     - Com es pot verificar la seguretat de les contrasenyes dels usuaris d’una màquina amb l'aplicació John de Ripper?
+
+	Primerament hem de juntar els arxius passwd i shadow situats a:
+
+	/etc/passwd i /etc/shadow a un mateix fitxer mypasswd
+
+	Un cop fet això podem executar john –format=crypt mypasswd
+
+	Aixo en dona unes estadistiques de temps y les contrasenyes.
+	Com podem veure per les estadistiques rebudes y les propies contrasenyes podem saber que no son gaire 		segures (ha trigat 3 segons en petarla). (Evidencia 1.1.)
+
+	https://www.openwall.com/john/doc/FAQ.shtml
+
+     - Com s’utilitzen els diccionaris per verificar la seguretat de les contrasenyes dels usuaris d’una màquina?
+
+	Podem configurar un diccionari amb un llistat de contrasenyes que volver probar, amb aquest 			diccionari (Evidencia 1.2.) poder executar la comanda:
+
+	john –wordlist=diccionari.txt –format=crypt mypasswd
+
+	Això ens donara una sortida similar a la anterior, tot i que aquest cop podem veure que ens ha tardar 		una mica més (1 minut 48 segons). (Evidencia 1.3.txt)
+
+2- Servei SSH
+	Primer de tot per contestar les preguntes hem conectat 2 maquines per amb la mateixa xarxa NAT.
+
+     - Accions i requeriments
+        - Implementa un servidor i un client SSH.
+        - L'usuari entel hi té accés mitjançant usuari i contrasenya.
+        - L'usuari root hi té accés mitjançant una parella de claus privada/pública.
+        - Configura els paràmetres d'informació, xifrat, accés i manteniment de la sessió.
+        - Fes captures de xarxa amb un servidor i un client per validar els resultats.
+	
+     - Qüestions a respondre
+
+	- Com s’instal·la el servidor de SSH?
+	Ens instalem el servidor fent → apt install openssh-server.
+
+	Evidència d'ús:
+	Per comprovar que esta instalat fem → systemctl status ssh. (Evidencia 2.1.txt) I veiem que el ssh.service 	esta actiu, i que esta running.
+	
+	- Com es configura el servidor de SSH?
+
+	Per configurar el servidor ssh podem entrar al fitxer de configuració → nano /etc/ssh/sshd_config
+	En aquest fitxer podem configurar moltissimes cose, per exemple:
+	1. El port: per defecte es el port 22
+	2. PermitRootLogin: Permet per defecte l'accés directe com a usuari root a través de SSH. Tot i que aquesta 	opció està habilitada per defecte, és considerada una pràctica de seguretat recomanada desactivar-la i 	utilitzar un compte d'usuari normal per a les connexions SSH, per evitar possibles amenaces de seguretat.
+	3. PasswordAuthentication: Permet l'autenticació mitjançant contrasenya per defecte. Tot i que això 	facilita l'accés per a usuaris, l'autenticació amb claus públiques/privades és considerada més segura ja 	que no requereix el trànsit de contrasenyes a través de la xarxa.
+	4. PubkeyAuthentication: Habilita l'autenticació mitjançant claus públiques/privades per defecte. Això 	permet que els usuaris es connectin utilitzant el seu parell de claus SSH sense necessitat d'introduir una 	contrasenya.
+	5. AllowUsers o AllowGroups:  Aquestes opcions permeten especificar quins usuaris o grups tenen permís per 	connectar-se al servidor SSH. Aquestes opcions poden ser útils per limitar l'accés als usuaris o grups 	específics. 
+	Entre altres….
+
+	Evidència d'ús:
+	Per exemple hem provat a no deixar conectar-se a  l’usuari root per ssh. Primer de tot les dos maquines en 	las que estic fent ssh tenen el servidor i el client ssh instalat i estan en la mateixa xarxa NAT. La 	maquina seax1 sera la que es conecti a seax2. 
+	En la maquina la cual ens conectarem(seax2) fem → nano /etc/ssh/sshd_config i añadim en el fitxer → 	PermitRootLogin no. I fem → systemctl restart ssh per reinicia el servidor ssh.
+
+	I veig que si faig ssh root@10.0.2.4 no em deixa conectar-me, hem diu que la contrasenya es incorrecte. Per 	exemple si intentem entrar al entel fent → ssh entel@10.0.2.4.
+	Si ara fem → nano /etc/ssh/sshd_config i posem PermitRootLogin yes. Veiem que si ens podem conectar. 
+	Podem veure que si faig hostname hem surt que estic connectat a seax2. → hostname (evidencia 2.2.txt)
+
+	- Com es verifica el funcionament del servidor de SSH?
+
+	(TCP DUMP)
+	Primer de tot podem fer systemctl status ssh com hem fet en la evidencia 2.1.txt o podem conectar-nos com 	hem fet en la evidencia 2.2.txt de les anteriors preguntes.
+
+	- Com es genera una parella de claus privada/pública?   
+	
+	ssh-keygen -t rsa  
+
+	Evidència d'ús:
+	Fem la comanda anterior i guardem la clau privada/publica en el path -> /root/.ssh/id_rsa
+	Podem veure que estan generats els fitxers fen ls /root/.ssh (2.3.txt)
+
+	- Com es permet l’accés per SSH amb una parella de claus privada/pública?
+	
+	Anem al fitxer → nano /etc/ssh/sshd_config i posem PubkeyAuthentication yes
+
+	- Com es distribueix una parella de claus privada/pública?
+
+	Primer de tot generem claus publiques i privades en las dos maquinas en la ubicació predeterminada i en la 	maquina que volem fer la connexio en el meu cas SEAX1→ fem ssh-copy-id root@[ip_], el que farà es copiar la 	clau pública del SEAX1  a la carpeta authoritzed_keys de SEAX2.
+	Ara si ens conectem no demana contraseña.
+	Evidencia d’us. 2.5.1(Veiem el fitxer authontitzed_keys)
+
+    	- Com cal configurar les carpetes dels usuaris?
+	La idea de las carpetas esque al root només pot tenir accés el root és a dir els administradors, i els 	usuaris com entel només tingui acces a la seva carpeta. Estic obviant tot el tema dels grups perque sigui 	una estructura més sencilla.
+	
+	Evidencia d’ús:
+	Creem un usuari test → fent useradd -m -s /bin/bash test. 
+	El -m per asignar automaticament una carpteta en el home(/home/test). i el -s per especificar el shell. 
+	Despres li asignes una contraseña fent passwd test.
+
+	Si creem aixi la carpeta podem veure que desde el usuari entel podem accedir a la carpeta del test. Això no 	hauria de pasar!!
+	Llavors desde el root fem → chmod 700 /home/test. Perquè nomès el test pugui accedir a la seva carpeta.
+	Ara si intentem entrar desde el entel a la carpeta test veiem que surt permís denegat.
+
+	- Com s’instal·la el client de SSH?
+
+	Fent apt-get install openssh-client.
+	Aquesta pregunta la hem fet al principi per fer les demès proves.
+
+	Evidència d'ús:
+	Si fem → ssh -V. Veiem que ens surto tota la informacio de la versio que esta instalada del client ssh. 	(Podem veure la versió en les evidencias 2-Client-ssh.txt)
+
+	- Com es configura el client de SSH?
+	Anant al fitxer de configuració /etc/ssh/ssh_config, podem canviar moltes coses en la configuració.
+
+	Host: Específica opcions de configuració per a un host específic o grup d'amfitrions.
+	Port: Canvia el port per defecte que el client SSH utilitza per connectar-se als servidors (normalment el 	port 22).
+	User: Especifica el nom d'usuari que s'utilitzarà per iniciar sessió al servidor remot.
+	IdentityFile: Especifica la ubicació del fitxer de clau privada a utilitzar per l'autenticació.
+	ForwardAgent: Habilita o deshabilita l'agent de reenviament d'autenticació SSH.
+	ProxyCommand: Especifica una comanda utilitzada per connectar-se a través d'un servidor intermediari 	(proxy).
+
+	- Com es verifica el funcionament del client de SSH?
+	Obviament sabem que el client funciona perquè anteriorment ens hem conectat per ssh.
+	Apart ens hem conectat desde seax2 a seax1 per ssh(estant en la mateixa xarxa NAT)--> ssh entel@10.0.2.8. I 	veiem que si en seax1 fem → ps aux | grep ssh, veiem tots els procesos actius que estan gracias a que 	tenemim el client ssh de seax2 connectat al sevidor seax1.(veure en evidiencia 2.10.txt).
+
+	- Com es verifica l’empremta SSH d’un servidor?
+	Fent ssh-keyscan 10.0.2.8(ip seax1)[Ho podem veure en evidencia 2.11.txt].
+	Veiem que ens surten 3 empremta por ssh-rsa, ecdsa-sha2-nistp256, ssh-ed25519.
+	Evidència d'ús:
+	Si anem a la maquina seax2 i mirem les claus publiques fent nano  /etc/ssh/ssh_host_rsa_key.pub i nano  	/etc/ssh/ssh_host_ecdsa_key.pub i nano  /etc/ssh/ssh_host_ed25519_key.pub.
+	Veiem que coincideixen en les del fitxer 2.11.
+
+	- Com es poden generar túnels SSH?
+	- Com es verifica el funcionament dels túnels SSH?
+
+	Contestem les dos preguntes a la vegada perquè estàn relacionades.
+
+	El reenviament de ports, o port forwarding, permet redirigir el tràfic de xarxa des d'un port en una 	màquina cap a un altre port en una altra màquina a través d'una connexió SSH segura.
+	Reenviament de Port Local: El client SSH redirigeix el seu tràfic cap a una altra màquina a través del 	servidor SSH.
+	Reenviament de Port Remot: El servidor SSH redirigeix el tràfic cap a ell mateix des d'una altra màquina.
+
+	Per habilitar el reenviament de ports en el servidor SSH, cal modificar tres línies al fitxer de 	configuració /etc/ssh/sshd_config:
+
+	AllowAgentForwarding yes: Aixó ens permet reenviar sol·licituds d'autenticació de l'agent d'autenticació de 	l'usuari.
+	AllowTcpForwarding yes: Aixó ens permet reenviar el tràfic TCP a través de la connexió SSH, necessari per 	al reenviament de ports.
+	PermitTunnel yes: Aixó permet obrir canals de túnel, inclosos els utilitzats per al reenviament de ports.
+
+	Després de modificar aquestes línies, reinicia el servei SSH amb sudo systemctl restart sshd. 
+	Local:
+	Tenim 2 maquines:
+	Seax4 amb ip 10.0.2.12, que farà de equip local.
+	Seax1 amb ip 10.0.2.8, que farà de equip intermidiari i servidor.
+	Si desde seax4 fem wget http://localhost:8080, ens dira que 8080…. fallò:Conexión rehusada.
+
+	Hem capturat  fent desde seax4 → tcpdump -w 2.11.pcap.
+
+	Desprès fem desde seax4 fem → ssh -N -L localhost:8080:10.0.2.8:80 entel@10.0.2.8 i si tornem a fer		wget http://localhost:8080 ens descargara la pàgina, ja que es redirigeix i va pel port 80. 
+
+	I veiem que en 2.11.pcap estan paquets de redirecció de ports i de codificació ssh.
+	
+	Remot:
+	Tenim 4 maquines:
+	Seax4 amb ip 10.0.2.12, que farà de equip local.
+	Seax1 amb ip 10.0.2.8, que farà de equip servidor.
+	Seax3 amb ip 10.0.2.13, que farà d'intermediari.
+	Seax2 amb ip 10.0.2.4, que farà de client.
+	Amb Seax4 fem → ssh -N -R 10.0.2.12:8080:10.0.2.8:80 entel@10.0.2.13
+	Amb Seax1 fem la captura amb la comanda tcpdump -w 2.12.1.pcap
+	Amb Seax2 fem → ssh 10.0.2.13 i desde la connecxió remota fem wget http://localhost:8080 i ens descargara 	la pàgina.
+
+	Si veiem la captura 2.12.1.pcap veiem que es correspon al wget que hem fet i esta per el port 80.
+	
+	
+
+3- Servei SFTP.
+- Accions i requeriments
+
+      https://howtoforge.es/como-instalar-y-utilizar-sftp-en-servidores-linux/
+      https://reintech.io/blog/setting-up-sftp-secure-file-transfers-debian-12
+      https://wiki.debian.org/iptables
+      	
+
+    - Implementa un servidor i un client SFTP.
+    - Defineix les accions tant pel servidor com pel client.
+    - Comparteix la carpeta home de l'usuari.
+    - L'usuari no podrà accedir a la resta de disc.
+    - Defineix les regles del tallafocs adients per a aquest servei.
+
+	Per poder configurar el firewall primerament hem d'instalar el paquet iptables, aixo ho farem amb la 	comanda:
+
+	apt install iptables
+
+	A continuació utilitzarem les seguents comandes a la maquina que acturara com a servidor:
+
+	iptables -A INPUT -p tcp --dport 22 -s 10.0.2.11 -j ACCEPT
+	iptables -A OUTPUT -p tcp --dport 22 -s 10.0.2.11 -j ACCEPT
+	iptables -A INPUT -p tcp --dport 22 -j REJECT
+
+	Evidencia 3.2
+
+    - Fes proves mitjançant captures de xarxa amb un servidor i un client.
+
+	Podem fer la prova executant tcpdump (al servidor) mentre fem un sftp desde el client per poder capturar 	paquets.
+	Evidencia 3.3
+
+     - Com s'instal·la un servidor de fitxers amb SFTP?
+
+	Podem installar un servidor de fitxers SFTP amb la comanda apt install openssh-server
+
+     - Com es configura un servidor de fitxers amb SFTP?
+
+	Per poder configurar un servidor SFTP hem de modificar l’arxiu /etc/ssh/sshd_config i afegir o treure 	informació dependent del que volem fer.
+
+	En el nostre cas en el servidor haurem de modificar el fitxer /etc/ssh/sshd_config i afegir el següent:
+
+	Subsystem	sftp 	internal-sftp
+
+	Match Group sftp_users
+	ChrootDirectory %h
+	ForceCommand internal-sftp
+
+	Evidencia 3.1
+
+      - Com es verifica un servidor de fitxers amb SFTP?
+
+	Podem verificar un servidor fent la comanda:
+	ss -tuln
+
+	Aquesta comanda ens mostrarà una llista de sockets de la xarxa del nostre sistema.
+
+	Així podem veure com el port 22 (port per defecte de ssh y sftp) està LISTEN i per tant esta escoltant i 	preparat per acceptar connexions entrants.  
+
+	Evidencia 3.4.
+
+      - Com es pot compartir un directori amb SFTP?
+	
+	Al crear un usuari (usuari que utilitzarem per SFTP) i afegir-ho al grup sftp_users, estarem afegint el 	directori home d’aquest usuari a la compartició per sftp
+
+      - Com es pot engabiar un usuari (chroot) amb SFTP ?
+
+	Amb la configuració que hem fet anteriorment (ChrootDirectory %h)
+	i a més fent les següents comandes estarem fent que l’usuari no pugui sortir del seu directory home:
+
+	chown root:root /home/sftpuser
+	chmod 755 /home/sftpuser
+
+      - Com es securitza un servidor de fitxers SFTP?
+
+	Podem securitzar un servidor SFTP amb l’ús de regles que només permet l’ús desde la direcció del client 	fins a la direcció del servidor (tant per input con output) pel port 22.
+	Aixó ho hem fet en un dels passos anteriors, on configurem les regles del firewall del servidor 
+	Evidencia 3.2
+
+      - Com s'instal·la un client de fitxers amb SFTP?
+
+	Per poder instar un client de fitxers SFTP podem fer la seguent comanda apt install openssh-client
+
+      - Com es configura un client de fitxers amb SFTP?
+
+	Per a la part del client si volem configurar SFTP haurem de modificar el fitxer /etc/ssh/sshd_config
+	En aquest cas no ha fet falta modificar res del client.
+
+      - Com es verifica un client de fitxers amb SFTP?
+
+	Podem verificar un client fent la comanda:
+
+	ss -tuln
+
+	Així podem veure com el port 22 està obert (port que per defecte utlitza ssh y sftp)
+	Evidencia 3.5.
+
+      - Com es pot muntar automàticament (fstab) un recurs compartit amb SFTP?
+
+	Primerament hem d'instal·lar el paquet sshfs aixó ho podem fer amb la comanda apt install sshfs.
+
+	Podem muntar el directori automàticament amb fstab podem afegir la següent linea a fstab:
+	sftpuser@10.0.2.10:/home/sftpuser /mnt/sftp_mount fuse.sshfs defaults,_netdev 0 0
+
+	Acte seguit fem:
+	mount -a
+
+	Si fem df -h podem veure el que tenim muntat, aqui trobarem el que acabem de muntar.
+	Evidencia 3.6
+
+      - Com es pot muntar manualment un recurs compartit amb SFTP?
+
+	Per poder muntar de forma manual un recurs compartit amb SFTP podem fer utilitzar la seguent comanda: 
+	
+	sshfs sftpuser@10.0.2.10:/home/entel /mnt/manual
+
+	Si fem df -h podem veure el que tenim muntat, aqui trobarem el que acabem de muntar.
+	Evidencia 3.7

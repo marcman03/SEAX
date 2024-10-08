@@ -1,0 +1,18 @@
+
+; <<>> DiG 9.18.24-1-Debian <<>> dns.public.seax.edu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 62944
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 1aa965da56ad766b010000006643bf3f01e814f6b3bfb9e8 (good)
+;; QUESTION SECTION:
+;dns.public.seax.edu.		IN	A
+
+;; Query time: 0 msec
+;; SERVER: 10.1.10.4#53(10.1.10.4) (UDP)
+;; WHEN: Tue May 14 21:45:03 CEST 2024
+;; MSG SIZE  rcvd: 76
+

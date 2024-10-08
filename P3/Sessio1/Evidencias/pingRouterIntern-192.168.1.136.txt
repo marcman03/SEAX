@@ -1,0 +1,9 @@
+PING 192.168.1.136 (192.168.1.136) 56(84) bytes of data.
+64 bytes from 192.168.1.136: icmp_seq=1 ttl=64 time=0.250 ms
+64 bytes from 192.168.1.136: icmp_seq=2 ttl=64 time=0.277 ms
+64 bytes from 192.168.1.136: icmp_seq=3 ttl=64 time=0.309 ms
+64 bytes from 192.168.1.136: icmp_seq=4 ttl=64 time=0.301 ms
+
+--- 192.168.1.136 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3060ms
+rtt min/avg/max/mdev = 0.250/0.284/0.309/0.023 ms

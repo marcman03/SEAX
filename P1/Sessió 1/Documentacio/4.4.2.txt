@@ -1,0 +1,2 @@
+Ens surt el warning 
+ping: connect: la red es inaccesible

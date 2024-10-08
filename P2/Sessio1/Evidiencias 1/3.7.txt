@@ -1,0 +1,11 @@
+S.ficheros                        Tamaño Usados  Disp Uso% Montado en
+udev                                462M      0  462M   0% /dev
+tmpfs                                97M   584K   96M   1% /run
+/dev/sda1                           3,0G   1,6G  1,3G  55% /
+tmpfs                               481M      0  481M   0% /dev/shm
+tmpfs                               5,0M      0  5,0M   0% /run/lock
+scripts                             931G   800G  132G  86% /root/scripts
+tmpfs                                97M      0   97M   0% /run/user/0
+sftpuser@10.0.2.10:/home/sftpuser   3,0G   1,6G  1,3G  55% /mnt/sftp_mount
+tmpfs                                97M      0   97M   0% /run/user/1001
+sftpuser@10.0.2.10:/home/entel      3,0G   1,6G  1,3G  55% /mnt/manual

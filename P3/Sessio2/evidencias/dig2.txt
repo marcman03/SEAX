@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.18.24-1-Debian <<>> -x 10.1.10.3
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 39328
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: bb855bb0f43a8e3a010000006643bde73caecf9e813a310f (good)
+;; QUESTION SECTION:
+;3.10.1.10.in-addr.arpa.		IN	PTR
+
+;; AUTHORITY SECTION:
+10.IN-ADDR.ARPA.	86400	IN	SOA	10.IN-ADDR.ARPA. . 0 28800 7200 604800 86400
+
+;; Query time: 0 msec
+;; SERVER: 10.1.10.3#53(10.1.10.3) (UDP)
+;; WHEN: Tue May 14 21:39:19 CEST 2024
+;; MSG SIZE  rcvd: 129
+

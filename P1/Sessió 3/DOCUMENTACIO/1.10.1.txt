@@ -1,0 +1,716 @@
+feb 29 09:38:48 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+feb 29 09:40:25 seax1 kernel: mt76x0u 1-1:1.0 wlan1: renamed from wlxf02f74746821
+feb 29 09:44:47 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+feb 29 09:48:33 seax1 kernel: mt76x0u 1-1:1.0 wlan1: renamed from wlxf02f74746821
+mar 03 16:27:48 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 16:32:11 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 16:46:14 seax1 sh[234]: ifquery: unknown interface wwlxf02f74746821
+mar 03 16:46:15 seax1 ifup[291]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:46:18 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 16:47:32 seax1 ifup[1144]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:48:29 seax1 ifup[1181]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:49:13 seax1 ifup[1221]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:55:32 seax1 sh[234]: ifquery: unknown interface wwlxf02f74746821
+mar 03 16:55:33 seax1 ifup[331]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:55:36 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 16:56:24 seax1 ifup[1281]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:59:39 seax1 ifup[1319]: ifup: unknown interface wwlxf02f74746821
+mar 03 16:59:50 seax1 ifup[1359]: ifup: unknown interface wwlxf02f74746821
+mar 03 17:00:00 seax1 ifup[1397]: ifup: unknown interface wlxf02f74746821
+mar 03 17:02:53 seax1 kernel: mt76x0u 1-1:1.0 wlan1: renamed from wlxf02f74746821
+mar 03 17:05:52 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 17:08:54 seax1 dhclient[1131]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 17:08:54 seax1 ifup[1131]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 17:08:54 seax1 ifup[1131]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 17:08:54 seax1 ifup[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 03 17:08:54 seax1 dhclient[1131]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 17:08:54 seax1 dhclient[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 03 17:09:00 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 17:09:01 seax1 dhclient[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 17:09:01 seax1 ifup[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 17:09:02 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 17:09:05 seax1 wpa_supplicant[1120]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:09:05 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 17:09:05 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:09:06 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 17:09:06 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:09:06 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=11)
+mar 03 17:09:06 seax1 kernel: wlxf02f74746821: associated
+mar 03 17:09:06 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 17:09:06 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 17:09:06 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 17:09:09 seax1 dhclient[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 21
+mar 03 17:09:09 seax1 ifup[1131]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 21
+mar 03 17:09:09 seax1 ifup[1131]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 17:09:09 seax1 dhclient[1131]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 17:09:09 seax1 ifup[1158]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 17:09:09 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 17:09:09 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 17:09:09 seax1 ifup[1164]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 17:41:15 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 17:41:16 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 17:41:16 seax1 dhclient[1131]: receive_packet failed on wlxf02f74746821: Network is down
+mar 03 17:41:27 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 17:41:33 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 17:41:38 seax1 wpa_supplicant[1120]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:41:38 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=12)
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: associated
+mar 03 17:41:39 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 17:41:39 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 17:41:39 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 17:45:54 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 17:45:54 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 17:45:55 seax1 dhclient[1131]: receive_packet failed on wlxf02f74746821: Network is down
+mar 03 17:45:59 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 17:46:11 seax1 wpa_supplicant[1120]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:46:11 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:46:12 seax1 wpa_supplicant[1120]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=12)
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: associated
+mar 03 17:46:12 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 17:46:12 seax1 wpa_supplicant[1120]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 17:46:12 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 17:46:12 seax1 wpa_supplicant[1120]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 17:46:12 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 17:46:12 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 17:47:16 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 17:47:17 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 17:47:33 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 17:47:35 seax1 wpa_supplicant[1120]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:47:35 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=13)
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: associated
+mar 03 17:47:36 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 17:47:36 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 17:47:36 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 19:18:26 seax1 dhclient[1865]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 3
+mar 03 19:18:27 seax1 dhclient[1865]: DHCPREQUEST for 192.168.1.161 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 19:18:27 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 19:18:27 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 19:18:38 seax1 dhclient[1879]: DHCPRELEASE of 192.168.1.161 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 19:19:01 seax1 dhclient[1906]: Listening on LPF/wlxf02f74746821/00:11:22:33:44:55
+mar 03 19:19:01 seax1 dhclient[1906]: Sending on   LPF/wlxf02f74746821/00:11:22:33:44:55
+mar 03 19:19:01 seax1 dhclient[1906]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 19:19:01 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 19:19:02 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 19:19:02 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:19:02 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:19:02 seax1 wpa_supplicant[1120]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 19:19:02 seax1 wpa_supplicant[1120]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 19:19:05 seax1 dhclient[1950]: Listening on LPF/wlxf02f74746821/00:11:22:33:44:55
+mar 03 19:19:05 seax1 dhclient[1950]: Sending on   LPF/wlxf02f74746821/00:11:22:33:44:55
+mar 03 19:19:05 seax1 dhclient[1950]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 19:19:06 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 19:19:13 seax1 dhclient[1950]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 03 19:19:16 seax1 wpa_supplicant[1939]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:19:16 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 19:19:17 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:19:17 seax1 wpa_supplicant[1939]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:19:17 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 19:19:17 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:19:17 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=15)
+mar 03 19:19:17 seax1 wpa_supplicant[1939]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 19:19:17 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 19:19:17 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 19:19:17 seax1 kernel: wlxf02f74746821: associated
+mar 03 19:19:18 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 19:19:18 seax1 wpa_supplicant[1939]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 19:19:18 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 19:19:18 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 19:19:24 seax1 dhclient[1950]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 03 19:19:24 seax1 dhclient[1950]: DHCPREQUEST for 192.168.1.161 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 19:19:25 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 19:19:25 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 19:25:43 seax1 ifdown[2029]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=3).
+mar 03 19:25:43 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 19:25:44 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 19:25:44 seax1 dhclient[1950]: receive_packet failed on wlxf02f74746821: Network is down
+mar 03 19:25:44 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:25:44 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:25:44 seax1 wpa_supplicant[1939]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 19:25:44 seax1 wpa_supplicant[1939]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 19:25:47 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 19:25:47 seax1 ifup[2111]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=3).
+mar 03 19:25:57 seax1 wpa_supplicant[2093]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:25:57 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=16)
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: associated
+mar 03 19:25:58 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 19:25:58 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 19:25:58 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 19:27:04 seax1 ifdown[2267]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=3).
+mar 03 19:27:04 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 19:27:05 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 19:27:05 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:27:05 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:27:05 seax1 wpa_supplicant[2093]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 19:27:05 seax1 wpa_supplicant[2093]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 19:27:14 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 19:27:16 seax1 ifup[925]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:27:25 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 19:27:27 seax1 wpa_supplicant[900]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:27:27 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=17)
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: associated
+mar 03 19:27:28 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 19:27:28 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 19:27:28 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 19:27:52 seax1 ifdown[1154]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:27:52 seax1 dhclient[1164]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:52 seax1 ifdown[1164]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:52 seax1 dhclient[1164]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:52 seax1 ifdown[1164]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:52 seax1 dhclient[1164]: DHCPRELEASE of 192.168.1.161 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 19:27:52 seax1 ifdown[1164]: DHCPRELEASE of 192.168.1.161 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 19:27:52 seax1 ifdown[1168]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:27:52 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 19:27:53 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 19:27:53 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:27:53 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:27:53 seax1 wpa_supplicant[900]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 19:27:53 seax1 wpa_supplicant[900]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 19:27:55 seax1 dhclient[1229]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:55 seax1 ifup[1229]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:55 seax1 ifup[1229]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:55 seax1 ifup[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 5
+mar 03 19:27:55 seax1 dhclient[1229]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 19:27:55 seax1 dhclient[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 5
+mar 03 19:27:56 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 19:28:00 seax1 dhclient[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 03 19:28:00 seax1 ifup[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 03 19:28:06 seax1 wpa_supplicant[1218]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:4e:87:d7 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:28:06 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:4e:87:d7
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:4e:87:d7 (try 1/3)
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: Trying to associate with c6:ed:dc:4e:87:d7 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:4e:87:d7 (try 1/3)
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:4e:87:d7 (capab=0x511 status=0 aid=12)
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: associated
+mar 03 19:28:07 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:4e:87:d7
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: Associated with c6:ed:dc:4e:87:d7
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:4e:87:d7 [PTK=CCMP GTK=CCMP]
+mar 03 19:28:07 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:4e:87:d7 completed [id=0 id_str=]
+mar 03 19:28:07 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 19:28:07 seax1 dhclient[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 03 19:28:07 seax1 ifup[1229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 03 19:28:08 seax1 ifup[1229]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 19:28:08 seax1 dhclient[1229]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 19:28:08 seax1 ifup[1242]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:28:08 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 19:28:08 seax1 systemd-resolved[245]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 19:28:08 seax1 ifup[1248]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:29:14 seax1 ifdown[1382]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:29:14 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:4e:87:d7 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 19:29:14 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:4e:87:d7 reason=3 locally_generated=1
+mar 03 19:29:14 seax1 dhclient[1229]: receive_packet failed on wlxf02f74746821: Network is down
+mar 03 19:29:14 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:29:14 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 19:29:14 seax1 wpa_supplicant[1218]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 19:29:14 seax1 wpa_supplicant[1218]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 19:29:16 seax1 ifup[1462]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 19:29:17 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 19:29:27 seax1 wpa_supplicant[1444]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:29:27 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=18)
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: associated
+mar 03 19:29:28 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 19:29:28 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 19:29:28 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 20:00:06 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 20:00:06 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 20:00:08 seax1 kernel: mt76x0u 1-1:1.0 wlan1: renamed from wlxf02f74746821
+mar 03 20:01:18 seax1 ifdown[1692]: ifdown: ignoring unknown interface wlxf02f74746821=wlxf02f74746821
+mar 03 20:01:18 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:01:18 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:01:18 seax1 wpa_supplicant[1444]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 20:01:18 seax1 wpa_supplicant[1444]: Could not read interface wlxf02f74746821 flags: No such device
+mar 03 20:01:18 seax1 wpa_supplicant[1444]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: Could not read interface wlxf02f74746821 flags: No such device
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: Could not read interface wlxf02f74746821 flags: No such device
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: Could not read interface wlxf02f74746821 flags: No such device
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: WEXT: Could not set interface 'wlxf02f74746821' UP
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: wlxf02f74746821: Failed to initialize driver interface
+mar 03 20:54:13 seax1 wpa_supplicant[1185]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:54:13 seax1 ifup[1158]: ifup: failed to bring up wlxf02f74746821
+mar 03 20:55:23 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 03 20:55:25 seax1 dhclient[919]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 20:55:25 seax1 ifup[919]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 20:55:25 seax1 ifup[919]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 20:55:25 seax1 ifup[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:25 seax1 dhclient[919]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 20:55:25 seax1 dhclient[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:31 seax1 dhclient[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:31 seax1 ifup[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:34 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:55:36 seax1 wpa_supplicant[901]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:55:36 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=21)
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: associated
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 20:55:37 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 20:55:37 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 20:55:37 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 20:55:40 seax1 dhclient[919]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 20:55:40 seax1 ifup[919]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 20:55:40 seax1 ifup[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:40 seax1 dhclient[919]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 20:55:41 seax1 ifup[1063]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:55:41 seax1 systemd-resolved[246]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 20:55:41 seax1 systemd-resolved[246]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 20:55:41 seax1 ifup[1069]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:56:53 seax1 ifdown[1167]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:56:53 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 20:56:53 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 20:56:53 seax1 dhclient[919]: receive_packet failed on wlxf02f74746821: Network is down
+mar 03 20:56:53 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:56:53 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:56:53 seax1 wpa_supplicant[901]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 20:56:53 seax1 wpa_supplicant[901]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 20:56:55 seax1 ifup[1247]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:56:56 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:57:06 seax1 wpa_supplicant[1229]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:57:06 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=22)
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: associated
+mar 03 20:57:07 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 20:57:07 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 20:57:07 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 20:57:18 seax1 ifdown[1381]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:57:18 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 20:57:19 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 20:57:19 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:57:19 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:57:19 seax1 wpa_supplicant[1229]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 20:57:19 seax1 wpa_supplicant[1229]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 20:57:21 seax1 ifup[1461]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:57:21 seax1 systemd-resolved[246]: wlxf02f74746821: Bus client set DNS server list to: 8.8.8.8
+mar 03 20:57:21 seax1 ifup[1479]: /etc/network/if-up.d/resolved: 1: /run/network/ifupdown-inet-wlxf02f74746821: DNS=8.8.8.8: not found
+mar 03 20:57:21 seax1 systemd-resolved[246]: wlxf02f74746821: Bus client set search domain list to: DOMAINS
+mar 03 20:57:22 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:57:27 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:57:32 seax1 wpa_supplicant[1443]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:57:32 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 20:57:32 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:57:33 seax1 wpa_supplicant[1443]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:57:33 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 20:57:33 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:57:33 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=23)
+mar 03 20:57:33 seax1 wpa_supplicant[1443]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 20:57:33 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 20:57:33 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 20:57:33 seax1 kernel: wlxf02f74746821: associated
+mar 03 20:57:33 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 20:57:34 seax1 wpa_supplicant[1443]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 20:57:34 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 20:57:34 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 20:58:03 seax1 ifdown[1610]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:58:03 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 20:58:04 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 20:58:04 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:58:04 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 20:58:04 seax1 wpa_supplicant[1443]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 20:58:04 seax1 wpa_supplicant[1443]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 20:58:07 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:58:07 seax1 ifup[1690]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 20:58:07 seax1 systemd-resolved[1505]: wlxf02f74746821: Bus client set DNS server list to: 8.8.8.8
+mar 03 20:58:07 seax1 ifup[1708]: /etc/network/if-up.d/resolved: 1: /run/network/ifupdown-inet-wlxf02f74746821: DNS=8.8.8.8: not found
+mar 03 20:58:07 seax1 systemd-resolved[1505]: wlxf02f74746821: Bus client set search domain list to: DOMAINS
+mar 03 20:58:13 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 20:58:17 seax1 wpa_supplicant[1672]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:58:17 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=24)
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: associated
+mar 03 20:58:18 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 20:58:18 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 20:58:18 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 21:03:28 seax1 ifdown[1851]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 21:03:28 seax1 dhclient[1861]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:28 seax1 ifdown[1861]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:28 seax1 dhclient[1861]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:28 seax1 ifdown[1861]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:28 seax1 dhclient[1861]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 21:03:28 seax1 ifdown[1861]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 03 21:03:28 seax1 ifdown[1865]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 21:03:28 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 03 21:03:28 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 03 21:03:29 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 21:03:29 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 03 21:03:29 seax1 wpa_supplicant[1672]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 03 21:03:29 seax1 wpa_supplicant[1672]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 03 21:03:31 seax1 dhclient[1927]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:31 seax1 ifup[1927]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:31 seax1 ifup[1927]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:31 seax1 ifup[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 21:03:31 seax1 dhclient[1927]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 03 21:03:31 seax1 dhclient[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 8
+mar 03 21:03:31 seax1 wpa_supplicant[1916]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 21:03:37 seax1 wpa_supplicant[1916]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 03 21:03:39 seax1 dhclient[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 03 21:03:39 seax1 ifup[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 03 21:03:41 seax1 wpa_supplicant[1916]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 21:03:41 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 21:03:42 seax1 wpa_supplicant[1916]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: authenticated
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=25)
+mar 03 21:03:42 seax1 wpa_supplicant[1916]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 03 21:03:42 seax1 wpa_supplicant[1916]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 03 21:03:42 seax1 wpa_supplicant[1916]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: associated
+mar 03 21:03:42 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 03 21:03:43 seax1 wpa_supplicant[1916]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 03 21:03:43 seax1 wpa_supplicant[1916]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 03 21:03:43 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 03 21:03:48 seax1 dhclient[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 13
+mar 03 21:03:48 seax1 ifup[1927]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 13
+mar 03 21:03:49 seax1 ifup[1927]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 21:03:49 seax1 dhclient[1927]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 03 21:03:49 seax1 ifup[1941]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 03 21:03:49 seax1 systemd-resolved[1734]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 03 21:03:49 seax1 systemd-resolved[1734]: wlxf02f74746821: Bus client set search domain list to: home
+mar 03 21:03:49 seax1 ifup[1947]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 16:38:09 seax1 wpa_supplicant[535]: Could not read interface wlxf02f74746821 flags: No such device
+mar 04 16:38:09 seax1 wpa_supplicant[535]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 04 16:38:09 seax1 wpa_supplicant[535]: Could not read interface wlxf02f74746821 flags: No such device
+mar 04 16:38:09 seax1 wpa_supplicant[535]: Could not read interface wlxf02f74746821 flags: No such device
+mar 04 16:38:09 seax1 wpa_supplicant[535]: WEXT: Could not set interface 'wlxf02f74746821' UP
+mar 04 16:38:09 seax1 wpa_supplicant[535]: wlxf02f74746821: Failed to initialize driver interface
+mar 04 16:38:09 seax1 wpa_supplicant[535]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 16:38:09 seax1 ifup[434]: ifup: failed to bring up wlxf02f74746821
+mar 04 16:38:16 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 04 16:38:52 seax1 dhclient[1143]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 16:38:52 seax1 ifup[1143]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 16:38:52 seax1 ifup[1143]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 16:38:52 seax1 ifup[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:38:52 seax1 dhclient[1143]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 16:38:52 seax1 dhclient[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:38:55 seax1 dhclient[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:38:55 seax1 ifup[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:38:58 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 16:39:01 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 16:39:03 seax1 wpa_supplicant[1132]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 16:39:03 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 04 16:39:03 seax1 dhclient[1143]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 4
+mar 04 16:39:03 seax1 ifup[1143]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 4
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=34)
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: associated
+mar 04 16:39:04 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 04 16:39:04 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 04 16:39:04 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 16:39:07 seax1 dhclient[1143]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 16:39:07 seax1 ifup[1143]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 16:39:08 seax1 ifup[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:39:08 seax1 dhclient[1143]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 16:39:08 seax1 ifup[1170]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 16:39:08 seax1 systemd-resolved[248]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 04 16:39:08 seax1 systemd-resolved[248]: wlxf02f74746821: Bus client set search domain list to: home
+mar 04 16:39:08 seax1 ifup[1176]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 17:58:54 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 17:58:55 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 04 17:58:55 seax1 dhclient[1143]: receive_packet failed on wlxf02f74746821: Network is down
+mar 04 17:59:26 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 17:59:28 seax1 wpa_supplicant[1132]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 17:59:28 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=36)
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: associated
+mar 04 17:59:29 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 04 17:59:29 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 04 17:59:29 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 17:59:36 seax1 ifdown[8154]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 17:59:37 seax1 dhclient[8164]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:37 seax1 ifdown[8164]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:37 seax1 dhclient[8164]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:37 seax1 ifdown[8164]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:37 seax1 dhclient[8164]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 17:59:37 seax1 ifdown[8164]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 17:59:37 seax1 ifdown[8168]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 17:59:37 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 17:59:38 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 04 17:59:38 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 17:59:38 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 17:59:38 seax1 wpa_supplicant[1132]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 04 17:59:38 seax1 wpa_supplicant[1132]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 04 17:59:40 seax1 dhclient[8229]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:40 seax1 ifup[8229]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:40 seax1 ifup[8229]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:40 seax1 ifup[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 6
+mar 04 17:59:40 seax1 dhclient[8229]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 17:59:40 seax1 dhclient[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 6
+mar 04 17:59:41 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 17:59:46 seax1 dhclient[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 04 17:59:46 seax1 ifup[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+mar 04 17:59:51 seax1 wpa_supplicant[8218]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 17:59:51 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=37)
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: associated
+mar 04 17:59:52 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 04 17:59:52 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 04 17:59:52 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 17:59:55 seax1 dhclient[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 17:59:55 seax1 ifup[8229]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 17:59:55 seax1 ifup[8229]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 17:59:55 seax1 dhclient[8229]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 17:59:55 seax1 ifup[8241]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 17:59:55 seax1 systemd-resolved[248]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 04 17:59:55 seax1 systemd-resolved[248]: wlxf02f74746821: Bus client set search domain list to: home
+mar 04 17:59:55 seax1 ifup[8247]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:04:16 seax1 ifdown[13347]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:04:17 seax1 dhclient[13361]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:17 seax1 ifdown[13361]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:17 seax1 dhclient[13361]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:17 seax1 ifdown[13361]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:17 seax1 dhclient[13361]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 19:04:17 seax1 ifdown[13361]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 19:04:17 seax1 ifdown[13365]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:04:17 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 19:04:18 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 04 19:04:18 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 19:04:18 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 19:04:18 seax1 wpa_supplicant[8218]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 04 19:04:18 seax1 wpa_supplicant[8218]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 04 19:04:33 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 04 19:04:35 seax1 dhclient[917]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:35 seax1 ifup[917]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:35 seax1 ifup[917]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:35 seax1 ifup[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 3
+mar 04 19:04:35 seax1 dhclient[917]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:04:35 seax1 dhclient[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 3
+mar 04 19:04:38 seax1 dhclient[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 04 19:04:38 seax1 ifup[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 04 19:04:44 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 19:04:45 seax1 dhclient[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 19:04:45 seax1 ifup[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 04 19:04:46 seax1 wpa_supplicant[899]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:04:46 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=38)
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: associated
+mar 04 19:04:47 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 04 19:04:47 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 04 19:04:47 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 19:04:56 seax1 dhclient[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 12
+mar 04 19:04:56 seax1 ifup[917]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 12
+mar 04 19:04:56 seax1 ifup[917]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 19:04:56 seax1 dhclient[917]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 19:04:56 seax1 ifup[1061]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:04:56 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 04 19:04:56 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set search domain list to: home
+mar 04 19:04:56 seax1 ifup[1067]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:05:50 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 19:05:51 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 04 19:05:51 seax1 dhclient[917]: receive_packet failed on wlxf02f74746821: Network is down
+mar 04 19:06:07 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 19:06:09 seax1 wpa_supplicant[899]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:4e:87:d7 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:06:09 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:4e:87:d7
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:4e:87:d7 (try 1/3)
+mar 04 19:06:10 seax1 wpa_supplicant[899]: wlxf02f74746821: Trying to associate with c6:ed:dc:4e:87:d7 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:4e:87:d7 (try 1/3)
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:4e:87:d7 (capab=0x511 status=0 aid=29)
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: associated
+mar 04 19:06:10 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:4e:87:d7
+mar 04 19:06:10 seax1 wpa_supplicant[899]: wlxf02f74746821: Associated with c6:ed:dc:4e:87:d7
+mar 04 19:06:10 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 19:06:10 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 19:06:11 seax1 wpa_supplicant[899]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:4e:87:d7 [PTK=CCMP GTK=CCMP]
+mar 04 19:06:11 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:4e:87:d7 completed [id=0 id_str=]
+mar 04 19:06:11 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 19:14:25 seax1 ifdown[1177]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:14:26 seax1 dhclient[1187]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:26 seax1 ifdown[1187]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:26 seax1 dhclient[1187]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:26 seax1 ifdown[1187]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:26 seax1 dhclient[1187]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 19:14:26 seax1 ifdown[1187]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 04 19:14:26 seax1 ifdown[1191]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:14:26 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:4e:87:d7 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 19:14:26 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:4e:87:d7 reason=3 locally_generated=1
+mar 04 19:14:26 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 19:14:27 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 04 19:14:27 seax1 wpa_supplicant[899]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 04 19:14:27 seax1 wpa_supplicant[899]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 04 19:14:29 seax1 dhclient[1253]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:29 seax1 ifup[1253]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:29 seax1 ifup[1253]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:29 seax1 ifup[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 5
+mar 04 19:14:29 seax1 dhclient[1253]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 04 19:14:29 seax1 dhclient[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 5
+mar 04 19:14:29 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+mar 04 19:14:34 seax1 dhclient[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 14
+mar 04 19:14:34 seax1 ifup[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 14
+mar 04 19:14:39 seax1 wpa_supplicant[1242]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:14:39 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 04 19:14:40 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 19:14:40 seax1 wpa_supplicant[1242]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 04 19:14:40 seax1 kernel: wlxf02f74746821: authenticated
+mar 04 19:14:40 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 04 19:14:40 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=39)
+mar 04 19:14:40 seax1 wpa_supplicant[1242]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 04 19:14:40 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 04 19:14:40 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=ES
+mar 04 19:14:40 seax1 kernel: wlxf02f74746821: associated
+mar 04 19:14:41 seax1 wpa_supplicant[1242]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 04 19:14:41 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 04 19:14:41 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 04 19:14:41 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 04 19:14:48 seax1 dhclient[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 18
+mar 04 19:14:48 seax1 ifup[1253]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 18
+mar 04 19:14:49 seax1 ifup[1253]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 19:14:49 seax1 dhclient[1253]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 04 19:14:49 seax1 ifup[1266]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 19:14:49 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 04 19:14:49 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set search domain list to: home
+mar 04 19:14:49 seax1 ifup[1272]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=2).
+mar 04 20:14:15 seax1 kernel: wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+mar 04 20:14:16 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-DISCONNECTED bssid=c6:ed:dc:65:22:b9 reason=3 locally_generated=1
+mar 04 20:14:16 seax1 dhclient[1253]: receive_packet failed on wlxf02f74746821: Network is down
+mar 05 16:46:59 seax1 kernel: mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+mar 05 16:47:05 seax1 ifdown[5303]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=3).
+mar 05 16:47:06 seax1 dhclient[5313]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:06 seax1 ifdown[5313]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:06 seax1 dhclient[5313]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:06 seax1 ifdown[5313]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:06 seax1 dhclient[5313]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 05 16:47:06 seax1 ifdown[5313]: DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+mar 05 16:47:06 seax1 ifdown[5317]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=3).
+mar 05 16:47:07 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 05 16:47:07 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-DSCP-POLICY clear_all
+mar 05 16:47:07 seax1 wpa_supplicant[1242]: nl80211: deinit ifname=wlxf02f74746821 disabled_11b_rates=0
+mar 05 16:47:07 seax1 wpa_supplicant[1242]: wlxf02f74746821: CTRL-EVENT-TERMINATING
+mar 05 16:47:09 seax1 dhclient[5378]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:09 seax1 ifup[5378]: Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:09 seax1 ifup[5378]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:09 seax1 ifup[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 05 16:47:09 seax1 dhclient[5378]: Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+mar 05 16:47:09 seax1 dhclient[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 7
+mar 05 16:47:16 seax1 dhclient[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 05 16:47:16 seax1 ifup[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 11
+mar 05 16:47:19 seax1 wpa_supplicant[5367]: wlxf02f74746821: SME: Trying to authenticate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 05 16:47:19 seax1 kernel: wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+mar 05 16:47:20 seax1 kernel: wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+mar 05 16:47:21 seax1 wpa_supplicant[5367]: wlxf02f74746821: Trying to associate with c6:ed:dc:65:22:b9 (SSID='MIWIFI_6hcH' freq=5240 MHz)
+mar 05 16:47:21 seax1 kernel: wlxf02f74746821: authenticated
+mar 05 16:47:21 seax1 kernel: wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+mar 05 16:47:21 seax1 kernel: wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=54)
+mar 05 16:47:21 seax1 wpa_supplicant[5367]: wlxf02f74746821: Associated with c6:ed:dc:65:22:b9
+mar 05 16:47:21 seax1 wpa_supplicant[5367]: wlxf02f74746821: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+mar 05 16:47:21 seax1 kernel: wlxf02f74746821: associated
+mar 05 16:47:21 seax1 wpa_supplicant[5367]: wlxf02f74746821: WPA: Key negotiation completed with c6:ed:dc:65:22:b9 [PTK=CCMP GTK=CCMP]
+mar 05 16:47:21 seax1 wpa_supplicant[5367]: wlxf02f74746821: CTRL-EVENT-CONNECTED - Connection to c6:ed:dc:65:22:b9 completed [id=0 id_str=]
+mar 05 16:47:21 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+mar 05 16:47:21 seax1 kernel: wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+mar 05 16:47:27 seax1 dhclient[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 12
+mar 05 16:47:27 seax1 ifup[5378]: DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 12
+mar 05 16:47:29 seax1 ifup[5378]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 05 16:47:29 seax1 dhclient[5378]: DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+mar 05 16:47:29 seax1 ifup[5391]: Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=3).
+mar 05 16:47:29 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set DNS server list to: 212.230.135.2, 212.230.135.1
+mar 05 16:47:29 seax1 systemd-resolved[256]: wlxf02f74746821: Bus client set search domain list to: home
+mar 05 16:47:29 seax1 ifup[5397]: Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=3).

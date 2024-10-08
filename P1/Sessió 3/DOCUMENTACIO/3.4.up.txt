@@ -1,0 +1,32 @@
+Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=4).
+Killed old client process
+Internet Systems Consortium DHCP Client 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   Socket/fallback
+DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=4).
+Internet Systems Consortium DHCP Client 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   Socket/fallback
+DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 6
+DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 14
+DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 13
+DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 9
+DHCPDISCOVER on wlxf02f74746821 to 255.255.255.255 port 67 interval 10
+DHCPOFFER of 192.168.1.160 from 192.168.1.1
+DHCPREQUEST for 192.168.1.160 on wlxf02f74746821 to 255.255.255.255 port 67
+DHCPACK of 192.168.1.160 from 192.168.1.1
+Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=4).
+bound to 192.168.1.160 -- renewal in 35602 seconds.
+Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=4).
+No DNS servers specified, refusing operation.

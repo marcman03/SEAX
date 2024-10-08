@@ -1,0 +1,60 @@
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://apps.db.ripe.net/docs/HTML-Terms-And-Conditions
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '91.116.32.0 - 91.116.63.255'
+
+% Abuse contact for '91.116.32.0 - 91.116.63.255' is 'abuse@euskaltel.com'
+
+inetnum:        91.116.32.0 - 91.116.63.255
+netname:        EUSKALTEL-FTTH
+descr:          Global Telecommunication Service Provider
+descr:          in Spain
+country:        ES
+admin-c:        EU41-RIPE
+tech-c:         EU41-RIPE
+status:         ASSIGNED PA
+mnt-by:         EUSKALTEL-MNT
+created:        2020-05-04T10:46:38Z
+last-modified:  2020-05-04T10:46:38Z
+source:         RIPE # Filtered
+
+role:           EUSKALTEL RIPE
+address:        Edificio 809
+address:        Parque Tecnologico de Zamudio
+address:        48160 Derio (BIZKAIA)
+address:        Spain
+phone:          +34 94 4011000
+admin-c:        MLP363-RIPE
+admin-c:        NG1816-RIPE
+tech-c:         MLP363-RIPE
+tech-c:         NG1816-RIPE
+nic-hdl:        EU41-RIPE
+remarks:        ******************************************
+remarks:        For information, visit:
+remarks:        http://www.euskaltel.com
+remarks:        ******************************************
+mnt-by:         EUSKALTEL-MNT
+created:        2002-03-05T08:15:07Z
+last-modified:  2015-06-30T13:39:09Z
+source:         RIPE # Filtered
+abuse-mailbox:  abuse@euskaltel.com
+
+% Information related to '91.116.0.0/18AS12338'
+
+route:          91.116.0.0/18
+descr:          Euskaltel
+origin:         AS12338
+mnt-by:         EUSKALTEL-MNT
+created:        2020-05-04T10:10:19Z
+last-modified:  2020-05-04T10:10:19Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.109.1 (SHETLAND)
+
+

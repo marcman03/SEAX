@@ -1,0 +1,4 @@
+/mnt/samba_datos
+salida.txt
+test
+test.txt

@@ -1,0 +1,9 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-03-07 19:06 CET
+Nmap scan report for seax1 (10.0.2.15)
+Host is up (0.0000030s latency).
+Not shown: 998 closed udp ports (port-unreach)
+PORT     STATE         SERVICE
+68/udp   open|filtered dhcpc
+5355/udp open|filtered llmnr
+
+Nmap done: 1 IP address (1 host up) scanned in 1.35 seconds

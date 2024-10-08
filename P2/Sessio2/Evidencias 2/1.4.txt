@@ -1,0 +1,22 @@
+● smbd.service - Samba SMB Daemon
+     Loaded: loaded (/lib/systemd/system/smbd.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2024-03-21 09:55:23 CET; 41s ago
+       Docs: man:smbd(8)
+             man:samba(7)
+             man:smb.conf(5)
+    Process: 2873 ExecCondition=/usr/share/samba/is-configured smb (code=exited, status=0/SUCCESS)
+    Process: 2876 ExecStartPre=/usr/share/samba/update-apparmor-samba-profile (code=exited, status=0/SUCCESS)
+   Main PID: 2885 (smbd)
+     Status: "smbd: ready to serve connections..."
+      Tasks: 3 (limit: 1107)
+     Memory: 5.3M
+        CPU: 120ms
+     CGroup: /system.slice/smbd.service
+             ├─2885 /usr/sbin/smbd --foreground --no-process-group
+             ├─2887 /usr/sbin/smbd --foreground --no-process-group
+             └─2888 /usr/sbin/smbd --foreground --no-process-group
+
+mar 21 09:55:22 seax1 systemd[1]: smbd.service: Deactivated successfully.
+mar 21 09:55:22 seax1 systemd[1]: Stopped smbd.service - Samba SMB Daemon.
+mar 21 09:55:23 seax1 systemd[1]: Starting smbd.service - Samba SMB Daemon...
+mar 21 09:55:23 seax1 systemd[1]: Started smbd.service - Samba SMB Daemon.

@@ -1,0 +1,2 @@
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+192.168.56.0/24 dev enp0s3 proto kernel scope link src 192.168.56.101 

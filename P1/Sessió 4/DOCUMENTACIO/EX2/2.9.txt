@@ -1,0 +1,16 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-03-10 13:56 CET
+Nmap scan report for www.google.com (142.250.200.132)
+Host is up (0.0024s latency).
+Other addresses for www.google.com (not scanned): 2a00:1450:4003:80e::2004
+rDNS record for 142.250.200.132: mad41s14-in-f4.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   1.93 ms _gateway (10.0.2.2)
+2   1.94 ms mad41s14-in-f4.1e100.net (142.250.200.132)
+
+Nmap done: 1 IP address (1 host up) scanned in 9.90 seconds

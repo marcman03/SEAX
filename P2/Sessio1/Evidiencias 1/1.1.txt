@@ -1,0 +1,4 @@
+Loaded 2 password hashes with 2 different salts (crypt, generic crypt(3) [?/64])
+letne            (entel)
+toor             (root)
+

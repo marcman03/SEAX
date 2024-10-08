@@ -1,0 +1,460 @@
+Sessió 2 - Configuració de les interfícies de xarxa Ethernet.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Alumnes:
+Eric Millan Lombarte
+Marc Pascual Desentre
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1 - Dispositius Ethernet.
+    	
+
+- Què cal fer per a que una interfície Ethernet USB sigui controlada per la VM?
+
+Conectas el pen, vas a configuració-> USB i poses el pen.
+Lo añades en fichero etc/network/interfaces
+Das de alta el interfaz con if up
+No el demostrem perquè no tenim una interfície ethernet USB.
+
+
+	
+- Com es verifica que existeix el dispositiu PCI o USB a l'equip des de la línia de comandes?
+
+lspci | grep Ethernet
+lsusb | grep ‘Flash Drive’, posem flash Drive ja que es el nom del usb
+
+Evidència d’ús:
+L’output de la comanda lspci | grep Ethernet es troba en l’arxiu 1.2.1.txt
+L’output de la comandalsusb | grep ‘Flash Drive’ es troba en l’arxiu 1.2.2.txt. 
+
+
+
+- Com s'obté informació del model del dispositiu Ethernet des de la línia de comandes?
+
+lspci -m | grep Ethernet | awk -F '”' '{print $6}'
+
+Evidència d’ús:
+
+L’output de la comanda lspci -m | grep Ethernet | awk -F '”' '{print $6}' es troba en l’arxiu 1.3.txt
+
+
+
+- Com s'obté informació del fabricant del dispositiu Ethernet des de la línia de comandes?
+
+lspci -m | grep Ethernet | awk -F '”' '{print $4}'
+
+Evidència d’ús:
+L’output lspci -m | grep Ethernet | awk -F '”' '{print $4}' es troba al arxiu 1.4.txt
+
+
+
+- Com s'obté informació dels missatges del kernel relacionats amb el dispositiu?
+
+Si volem obtenir informació del kernel utilitzem:
+journalctl | grep enp0s3 
+Altre opció: dmesg | grep enp0s3
+
+Evidència d’ús:
+Veure els outputs en 1.5journaltcl i 1.5dmesg.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2 - Intefícies Ethernet (ip link).
+
+
+- Com es visualitzen les interfícies Ethernet existents des de la línia de comandes?
+
+Amb el ip link show ens mostra totes les interfícies existents en la VM.
+
+Nosaltres volem filtrar de totes les interfícies les ethernet.
+Totes les interfícies ethernet comencen per aquestes 3 lletres. “enp”
+Llavors amb un grep filtrem per “enp” 
+Amb el awk filtrem per tal de que només mostri el nom de la interfície.
+
+ip link show | grep enp | awk '{print substr($2, 1, length($2)-1)}'
+
+Evidència d’ús:
+Veure l’output en 2.1.txt.
+
+
+
+- Com s'obté informació de l’estat actiu o desactiu d’una interfície Ethernet des de la línia de comandes?
+
+ip -brief link show enp0s3 | awk ‘{print $1 “ “ $2}’
+
+Evidència d’ús:
+Veure l’output en 2.2.txt.
+
+
+
+- Com s’activa o es desactiva manualment una interfície Ethernet des de la línia de comandes?
+
+ip link set enp0s8 down 
+ip link set enp0s8 up
+
+
+
+- Com es reanomena una interfície Ethernet?
+
+Per reanomenar una interfície Ethernet primer cal desactivar-la (si es cal) primer:
+ip link set enp0s8 down
+
+Amb la següent comanda podem reanomenar la interfície desitjada amb qualsevol nom:
+ip link set enp0s8 name prova_2_4
+
+Evidència d’ús:
+Veure l’output en 2.4.txt.
+
+
+
+- Com s'obté informació del nom original d’una interfície Ethernet des de la línia de comandes?
+
+ip link show prova_2_4 | grep altname | awk ‘{print $1 “ “ $2}’
+
+Evidència d’ús:
+Veure l’output en 2.5.txt.
+
+
+
+- Com s'obté informació del mode promiscu d’una interfície Ethernet des de la línia de comandes?
+
+ip -d link show prova_2_4 | grep -E “promiscuity” | awk ‘{print $5 “ “ $6}’
+
+Evidència d’ús:
+Veure l’output en 2.6.txt.
+
+
+
+- Com es configura el mode promiscu d’una interfície Ethernet des de la línia de comandes?
+
+Desde el VirtualBox tenim que permetre la modificació del mode promiscu.
+Anema Configuració → Red → Avanzado → Modo Promiscuo → Acceptar.
+
+Tot seguit dins la màquina virtual permitim el mode promiscu amb la següent comanda:
+ip link set prova_2_4 promisc on
+
+Evidència d’ús:
+Veure l’output en 2.7.txt.
+
+
+
+- Com es pot conèixer la MTU del camí que porta a una certa adreça IP des de la línia de comandes?
+
+Per poder coneixer el MTU que porta una adreça ip podem fer
+ping -M do -s 2000 {ip}
+Com te el flag -M do no fragmenta el paquet, llavors si el valor de -s es mes gran et diu un warning amb el mtu del camí.
+ip link show
+
+Evidència d’ús:
+Veure l’output en 2.8.txt.
+
+
+    
+- Com es configura estàticament la MTU d'una interficie Ethernet des de la línia de comandes?
+
+ip link set prova_2_4 mtu 3000
+
+Evidència d’ús:
+Veure l’output en 2.9.txt.
+
+
+
+- Com es pot canviar l'adreça MAC de la interfície Ethernet des de la línia de comandes?
+
+ip link set [nom_interfície] address [nova_adreça_MAC]
+ip link set enp0s3 address 00:11:22:33:44:55
+
+Evidència d’ús:
+Veure l’output en 2.10.txt.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3 - Adreçament IP (ip address).
+
+
+- Com s'obté informació de l'adreça IP d'una interfície Ethernet des de la línia de comandes?
+
+ip address show [nom_interficie] | grep -E "inet\b" | awk '{print $2}'
+
+Evidència d’ús:
+Output de la comanda ip address show enp0s3 | grep -E "inet\b" | awk '{print $2}' en el fitxer 3.1.txt
+
+
+
+ - Com es configura dinàmicament una interfície Ethernet mitjançant fitxers de configuració?
+
+En el fitxer /etc/network/interfaces, afegim les següents línies:
+
+auto [nom_interfície]
+iface [nom_interfície] inet dhcp
+
+Evidència d’ús:
+Para comprovar això hem creat una nova interfície ethernet conectada per nat, anant a configuracion->red -> Adaptador 2. 
+I si fem ip addr show enp0s8 veiem que no té cap ip(veure en 3.2.1.txt)
+Després en el fitxer /etc/network/interfaces posem → 
+auto enp0s8
+iface enp0s8 inet dhcp
+hacemos→ systemctl restart networking para reiniciar el servicio. 
+i tornem a fer → ip addr show enp0s8 i ara si que esta la ip dinàmicament.(veure en 3.2.2.txt)
+
+
+							
+- Com es configura estàticament una interfície Ethernet mitjançant fitxers de configuració?
+
+Si volem configurar estaticament una interfície Ethernet, tenim que afegir les següents línies:
+anant a /etc/network/interfaces
+auto [nom_interfície]
+iface [nom_interfície] inet static
+address [adreça_IP]
+netmask [màscara_de_xarxa]
+gateway [porta_d'enllaç]
+
+Exemple:
+auto enp0s9
+iface enp0s9 inet static
+address 192.168.1.10
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+Evidència d’ús:
+Para comprovar això hem creat una nova interficie ethernet conectada per nat, anant a configuracion->red -> Adaptador 3.
+I si fem ip addr show enp0s9 veiem que no té cap ip(veure en 3.3.1.txt)
+Després en el fitxer /etc/network/interfaces posem → 
+auto enp0s9
+iface enp0s9 inet static
+address 192.168.1.10
+netmask 255.255.255.0
+gateway 192.168.1.1
+fem → systemctl restart networking para reiniciar el servicio. 
+i tornem a fer → ip addr show enp0s9 i ara si que esta la ip estaticament ben configurada.(veure en 3.3.2.txt)
+
+
+
+- Com s'activa la interfície Ethernet i configuren els paràmetres IP (o desactiva i desconfiguren) amb fitxers de configuració?
+anant a /etc/network/interfaces 
+i posant allow-hotplug [nom_interficie]
+i per exemple posar iface [nom_interficie] inet dhcp
+
+Evidència d’ús:
+ho hem evidenciat en la pregunta 3.2 i 3.3
+
+
+
+- Com es configura dinàmicament (DHCP) una interfície Ethernet des de la línia de comandes?
+
+per configurar dinamicament una interficie ethernet fem en la linea de comandas
+dhclient [nom Interficie]
+
+Evidència d'ús.
+Primer de tot, hem de assegurar-nos de que no està utilitzant dhcp la interficie, per això podem anar al fitxer /etc/network/interfaces. I borrar la ip que estigui configurada.
+Després reiniciem el servidor fent -> systemctl restart networking
+fent ip addr show [interficie] no hauria de sortir cap ip(veure output en 3.5.1.txt).
+fem la comanda dhclient enp0s3 i podem veure fem ip addr show ep0s3 que s’ha configurat una ip dinamica(veure output en 3.5.2.txt)
+
+
+
+- Com s'allibera l'adreça IP dinàmica i la reserva del DHCP des de la línia de comandes?
+
+Amb la comanda dhclient -r [interficie] s’allibera la ip 
+
+Evidència d'ús.
+Podem veure el ip addr show enp0s3 sense alliberar la ip (veure output en 3.6.1) i desprès fent dhclient -r enp0s3 podem veure que no hi ha cap ip( veure output en 3.6.2)
+
+
+
+- Com es configura estàticament una interfície Ethernet des de la línia de comandes?
+
+Per añadir una ip estatica fem ip addr add [ip/mask]
+per eliminarla fem ip addr del [ip/mask] dev [interficie eth ]
+
+Evidència d'ús.
+Tenint en enp0s3 sense cap ipv4 fem ip addr add 192.168.1.10 dev enp0s3 i podem veure fent ip addr show enp0s3 esta la ip añadida (veure output 3.7.1).
+Despres eliminem la ip que acabem de crear fent ip addr del 192.168.1.10 dev enp0s3 
+i ho podem veure fent ip addr show enp0s3( veure output 3.7.2)
+
+
+
+- Com s'elimina estàticament una adreça IP, o totes, des de la línia de comandes?
+
+Per eliminar una adreça ip fem  ip addr del [ip/mask] dev [interficie eth ]
+per eliminar totes fem ip addr flush [interficie eth]
+
+Evidència d'ús.
+En el apartat anterior hem vist com s’elimina una.
+Per veure com s’eliminen totes hem creat varias ip, amb la comanda ip addr add anteriorment citada i també hem creat una ip dinamica i una ipv6. (veure output de ip addr show enp0s3 abans de fer flush veure 3.8.1)
+despres fem ip addr flush dev enp0s3 ( veure output  ip addr show enp0s3 dspres de flush veure 3.8.2)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4 - Encaminament (ip route).
+- Com es visualitzen les taules de rutes?
+Amb la comanda -> ip route podem veure les rutes ipv4
+i amb la comanda -> ip -6 route podem veure les rutes ipv6
+
+Evidència d'ús.
+ip route (output en 4.1.1). Podem veure que 10.0.2.2  es el gateway por defecte.
+ip -6 route (output en 4.1.2)
+
+
+
+- Com es configura el gateway per defecte des de la línia de comandes?
+
+Primer esborrem el gateway per defecte si te fent → ip route del default.
+I després añadim la ruta fent → ip route add default via {dirección_del_gateway} dev {nombre_de_interfaz}
+
+Evidència d'ús.
+Eliminem la ruta fent ip route del default i despres fem ip route show default i veiem que no mostra cap output
+Despres fem->  ip route add default via 10.0.2.3 dev enp0s3. Tornem a fer ip route show default( output en 4.2.1)
+
+
+
+- Com es configura una ruta des de la línia de comandes?
+
+Per añadir una ruta fem → ip route add {red_destino}/{máscara_de_red} via {dirección_del_gateway} dev {nombre_de_interfaz}.
+
+Para eliminar la ruta fem → ip route del {red_destino}/{máscara_de_red}
+
+Evidència d'ús.
+Añadim una ruta fent →  ip route add 192.168.1.0/24 via 10.0.2.2 dev enp0s3  i fent→ ip route show 192.168.1.0/24 veiem que esta agregada correctament la ruta(veure en el output 4.3.1)
+Despres la eliminem fent→ ip route del 192.168.1.0/24 i veiem que si fem  ip route show 192.168.1.0/24 ja no surt cap ruta.
+
+
+
+
+- Com es pot obtenir la ruta utilitzada per arribar a una certa adreça IP des de la línia de comandes?
+
+Amb la comanda → ip route get <adreça_IP>. Podem veure quina ruta utilitzaria.
+
+Evidència d'ús.
+ip route get 192.168.1.0/24, i veiem quina ruta utlitzada per arribar a la ip(veure outpiut en 4.4.1)
+
+
+
+- Com es canvia una ruta des de la línia de comandes?
+ip route change {red_destino}/{máscara_de_red} via {nueva_dirección_del_gateway} dev{interficie_nova}
+
+Evidència d'ús.
+Hemos cambiado la gateway de 192.168.1.0/24 haciendo → ip route change 192.168.1.0 via 10.0.2.8 como podemos ver haciendo ip route show 192.168.1.0/24 (veure output en 4.5.1)
+
+
+
+- Com s'elimina una ruta des de la línia de comandes?   
+fent → ip route del 192.168.1.0/24.
+Evidència d'ús. 
+Fent ip route show 192.168.1.0/24 veiem que no hi ha cap output.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+5 - Connectivitat.
+
+
+- De quin fitxer s'obté el protocol i port que utilitza cada servei d'Internet des de la línia de comandes?
+
+Amb un cat /etc/services ens mostra els ports i el protocol de cada servei.
+
+
+
+- De quin fitxer s'obté el nom del protocol especificat en les capçaleres IP des de la línia de comandes?
+
+En el /etc/protocols
+
+
+
+- Com s'obté informació i/o s'inicia/atura el servei de xarxa?
+
+Amb systemctl status networking obtenim informació del servei de la xarxa.
+
+Amb systemctl [start/stop] networking s'inicia/atura el servei de xarxa.
+
+
+
+- Com es verifica la connectivitat cap a la xarxa local i cap a Internet d’una interfície Ethernet des de la línia de comandes?
+Per verificar la connexió cap a internet desde una interficie ethernet podem utilitzar la comanda →ping -I [interficie eth] [ip de google].
+
+Evidència d'ús. 
+Fent ping -I enp0s3 google.es i veiem que tenim connectivitat.(veure en 5.4.1.txt)
+
+
+
+- Com es verifica la connectivitat al DNS des de la línia de comandes?
+
+Primer de tot veiem quins servidors DNS tenim fent → cat /etc/resolv.conf | grep nameserver | awk ‘{print $2}(veure output en 5.5.1) i despres fem ping de la ip → ping 192.168.1.1, i te connectivitat(veure output en 5.5.2).
+
+
+
+
+- Com s'obté l’adreça IP externa d’una interfície Ethernet des de la línia de comandes?
+
+Per obtenir la ip externa ens la ha de dir algú “des de fora”, per exemple, nosaltres hem fet servir la pàgina ifconfig.me.
+
+Evidència d'ús. 
+Ens instalem el paquet wget( apt install wget). 
+despres fem → wget -qO- ifconfig.me. Utilitzem el -qO- per que ens surti el output de la ip externa per pantalla sensa res més .(per veure el output anar a 5.6).
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ 6 - Gestió de Noms.
+
+
+- Com es configura el nom l’equip?
+
+Entrem dins del fitxer /etc/hostname
+Canviem el nom actual per el desitjat.
+També podem executar la comanda hostnamectl set-hostname [nom_desitjat]
+
+Al finalitzar cal realitzar un reboot.
+
+
+
+- Com es configuren les correspondències locals @IP / nom / àlies dels equips de xarxa?
+
+Dins del fitxer /etc/hosts tenim la IP - nom - àlies de cada equip.
+Només cal entrar dins del fitxer amb els privilegis d’edició i modificar el que vulguis.
+
+Evidència d'ús. 
+En els outputs 6.2.1.txt i 6.2.2.txt podem veure com afegim un equip now amb la seva IP i podem fer-li ping.
+
+
+
+- Com es configuren les correspondències locals @IP / nom / àlies de les xarxes?
+
+Dins del fitxer /etc/networks  tenim la IP - nom de les xarxes i si volem podem afegir un àlies.
+Només cal entrar dins del fitxer amb els privilegis d’edició i modificar el que vulguis.
+
+Evidència d'ús. 
+En el output 6.3.txt podem veure les IP i els noms de les xarxes de la nostre VM.
+
+
+
+- Com es configuren els servidors de Noms de Domini?
+
+Dins del fitxer /etc/resolv.conf podem modificar els servidors de Noms de Domini.
+Afegim [nom_del_servidor] [IP]
+
+   
+
+- Com s'obtenen les correspondències @IP / nom / àlies del DNS?
+
+
+Per obtenir l’àlies del DNS podem utilitzar el dig:
+dig +short -x 8.8.8.8
+
+
+

@@ -1,0 +1,12 @@
+Interface wlxf02f74746821
+	ifindex 3
+	wdev 0x100000001
+	addr f0:2f:74:74:68:21
+	ssid MIWIFI_6hcH
+	type managed
+	wiphy 1
+	channel 48 (5240 MHz), width: 80 MHz, center1: 5210 MHz
+	txpower 19.00 dBm
+	multicast TXQ:
+		qsz-byt	qsz-pkt	flows	drops	marks	overlmt	hashcol	tx-bytes	tx-packets
+		0	0	0	0	0	0	0	0		0

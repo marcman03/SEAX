@@ -1,0 +1,25 @@
+● openvpn-server@server.service - OpenVPN service for server
+     Loaded: loaded (/lib/systemd/system/openvpn-server@.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2024-04-23 20:09:19 CEST; 1min 18s ago
+       Docs: man:openvpn(8)
+             https://community.openvpn.net/openvpn/wiki/Openvpn24ManPage
+             https://community.openvpn.net/openvpn/wiki/HOWTO
+   Main PID: 6825 (openvpn)
+     Status: "Pre-connection initialization successful"
+      Tasks: 2 (limit: 1107)
+     Memory: 2.3M
+        CPU: 18ms
+     CGroup: /system.slice/system-openvpn\x2dserver.slice/openvpn-server@server.service
+             ├─6825 /usr/sbin/openvpn --status /run/openvpn-server/status-server.log --status-version 2 --suppress-timestamps --config server.conf
+             └─6826 /bin/systemd-ask-password --icon network-vpn "Enter Private Key Password:"
+
+abr 23 20:09:19 seax2 systemd[1]: Stopped openvpn-server@server.service - OpenVPN service for server.
+abr 23 20:09:19 seax2 systemd[1]: Starting openvpn-server@server.service - OpenVPN service for server...
+abr 23 20:09:19 seax2 openvpn[6825]: Note: cipher 'AES-256-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+abr 23 20:09:19 seax2 openvpn[6825]: OpenVPN 2.6.3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+abr 23 20:09:19 seax2 openvpn[6825]: library versions: OpenSSL 3.0.11 19 Sep 2023, LZO 2.10
+abr 23 20:09:19 seax2 openvpn[6825]: DCO version: N/A
+abr 23 20:09:19 seax2 systemd[1]: Started openvpn-server@server.service - OpenVPN service for server.
+abr 23 20:09:19 seax2 openvpn[6825]: net_route_v4_best_gw query: dst 0.0.0.0
+abr 23 20:09:19 seax2 openvpn[6825]: net_route_v4_best_gw result: via 10.0.2.1 dev enp0s3
+abr 23 20:09:19 seax2 openvpn[6825]: Diffie-Hellman initialized with 2048 bit key

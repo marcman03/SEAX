@@ -1,0 +1,479 @@
+feb 15 12:12:05 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 12:12:05 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 12:12:05 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 12:12:05 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:12:05 seax1 dhclient[437]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:12:05 seax1 sh[437]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:12:05 seax1 sh[437]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:12:05 seax1 sh[437]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:12:05 seax1 dhclient[437]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:12:05 seax1 dhclient[437]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:12:07 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 12:12:07 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 12:12:13 seax1 dhclient[437]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:12:13 seax1 sh[437]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:12:13 seax1 sh[437]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:12:13 seax1 dhclient[437]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:12:13 seax1 sh[497]: enp0s3=enp0s3
+feb 15 12:19:39 seax1 kernel: e1000: enp0s3 NIC Link is Down
+feb 15 12:19:45 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 12:23:31 seax1 systemd[1]: Stopping ifup@enp0s3.service - ifup for enp0s3...
+feb 15 12:23:32 seax1 dhclient[2085]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:32 seax1 ifdown[2085]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:32 seax1 dhclient[2085]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:32 seax1 ifdown[2085]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:32 seax1 dhclient[2085]: DHCPRELEASE of 10.0.2.15 on enp0s3 to 10.0.2.2 port 67
+feb 15 12:23:32 seax1 ifdown[2085]: DHCPRELEASE of 10.0.2.15 on enp0s3 to 10.0.2.2 port 67
+feb 15 12:23:32 seax1 systemd[1]: ifup@enp0s3.service: Deactivated successfully.
+feb 15 12:23:32 seax1 systemd[1]: Stopped ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:23:39 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 12:23:40 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 12:23:40 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 12:23:40 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:23:40 seax1 dhclient[463]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:40 seax1 sh[463]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:40 seax1 sh[463]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:40 seax1 sh[463]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 15 12:23:40 seax1 dhclient[463]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:23:40 seax1 dhclient[463]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 15 12:23:42 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 12:23:42 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 12:36:09 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 12:36:09 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 12:36:09 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 12:36:09 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:36:09 seax1 dhclient[477]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:36:09 seax1 sh[477]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:36:09 seax1 sh[477]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:36:09 seax1 sh[477]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:36:09 seax1 dhclient[477]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:36:09 seax1 dhclient[477]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:36:11 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 12:36:11 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 12:36:12 seax1 dhclient[477]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:36:12 seax1 sh[477]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:36:12 seax1 sh[908]: enp0s3=enp0s3
+feb 15 12:41:56 seax1 systemd[1]: Stopping ifup@enp0s3.service - ifup for enp0s3...
+feb 15 12:41:57 seax1 dhclient[1120]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:41:57 seax1 ifdown[1120]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:41:57 seax1 ifdown[1120]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:41:57 seax1 dhclient[1120]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:41:57 seax1 dhclient[1120]: DHCPRELEASE of 10.0.2.15 on enp0s3 to 10.0.2.2 port 67
+feb 15 12:41:57 seax1 ifdown[1120]: DHCPRELEASE of 10.0.2.15 on enp0s3 to 10.0.2.2 port 67
+feb 15 12:41:57 seax1 systemd[1]: ifup@enp0s3.service: Deactivated successfully.
+feb 15 12:41:57 seax1 systemd[1]: Stopped ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:42:03 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 12:42:04 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 12:42:04 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 12:42:04 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 12:42:04 seax1 dhclient[397]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:42:04 seax1 sh[397]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:42:04 seax1 sh[397]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:42:04 seax1 sh[397]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:42:04 seax1 dhclient[397]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 12:42:04 seax1 dhclient[397]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 15 12:42:06 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 12:42:06 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 12:42:12 seax1 dhclient[397]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 15 12:42:12 seax1 sh[397]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 15 12:42:12 seax1 sh[397]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:42:12 seax1 dhclient[397]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 12:42:12 seax1 sh[913]: enp0s3=enp0s3
+feb 15 14:23:54 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 14:23:54 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 14:23:54 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 14:23:54 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 14:23:54 seax1 dhclient[412]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 14:23:54 seax1 sh[412]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 14:23:54 seax1 sh[412]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 14:23:54 seax1 sh[412]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 14:23:54 seax1 dhclient[412]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 14:23:54 seax1 dhclient[412]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 14:23:56 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 14:23:56 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 14:24:02 seax1 dhclient[412]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 14:24:02 seax1 sh[412]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 14:24:02 seax1 sh[934]: enp0s3=enp0s3
+feb 15 16:00:36 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 16:04:16 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 16:04:16 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 16:04:16 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 16:04:16 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 16:04:17 seax1 dhclient[382]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:04:17 seax1 sh[382]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:04:17 seax1 sh[382]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:04:17 seax1 sh[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:04:17 seax1 dhclient[382]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:04:17 seax1 dhclient[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:04:19 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 16:04:19 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 16:04:20 seax1 dhclient[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:04:20 seax1 sh[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:04:20 seax1 sh[905]: enp0s3=enp0s3
+feb 15 16:36:49 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 16:36:49 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 16:36:49 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 16:36:49 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 16:36:49 seax1 dhclient[410]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:36:49 seax1 sh[410]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:36:49 seax1 sh[410]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:36:49 seax1 sh[410]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:36:49 seax1 dhclient[410]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 16:36:49 seax1 dhclient[410]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:36:51 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 16:36:51 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 16:36:52 seax1 dhclient[410]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:36:52 seax1 sh[410]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 16:36:52 seax1 sh[927]: enp0s3=enp0s3
+feb 15 17:10:45 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 15 17:10:45 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 15 17:10:45 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 15 17:10:45 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 15 17:10:46 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 15 17:10:46 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 15 17:10:46 seax1 dhclient[385]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 17:10:46 seax1 sh[385]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 15 17:10:46 seax1 sh[385]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 17:10:46 seax1 sh[385]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 17:10:46 seax1 dhclient[385]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 15 17:10:46 seax1 dhclient[385]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 15 17:10:46 seax1 sh[542]: enp0s3=enp0s3
+feb 16 15:37:43 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 16 15:37:43 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 16 15:37:43 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 16 15:37:43 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 16 15:37:43 seax1 dhclient[371]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 16 15:37:43 seax1 sh[371]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 16 15:37:43 seax1 sh[371]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 16 15:37:43 seax1 sh[371]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 16 15:37:43 seax1 dhclient[371]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 16 15:37:43 seax1 dhclient[371]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 16 15:37:45 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 16 15:37:45 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 16 15:37:48 seax1 dhclient[371]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 16 15:37:48 seax1 sh[371]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 16 15:37:48 seax1 sh[927]: enp0s3=enp0s3
+feb 16 17:38:34 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 19 20:13:53 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 19 20:13:53 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 19 20:13:53 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 19 20:13:53 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 19 20:13:53 seax1 dhclient[364]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 19 20:13:53 seax1 sh[364]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 19 20:13:53 seax1 sh[364]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 19 20:13:53 seax1 sh[364]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 3
+feb 19 20:13:53 seax1 dhclient[364]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 19 20:13:53 seax1 dhclient[364]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 3
+feb 19 20:13:55 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 19 20:13:55 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 19 20:13:56 seax1 dhclient[364]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 3
+feb 19 20:13:56 seax1 sh[364]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 3
+feb 19 20:13:56 seax1 sh[364]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 19 20:13:56 seax1 dhclient[364]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 19 20:13:56 seax1 sh[904]: enp0s3=enp0s3
+feb 20 16:42:22 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 16:42:23 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 16:42:23 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 16:42:23 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 16:42:23 seax1 dhclient[384]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:42:23 seax1 sh[384]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:42:23 seax1 sh[384]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:42:23 seax1 sh[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:42:23 seax1 dhclient[384]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:42:23 seax1 dhclient[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:42:25 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 16:42:25 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 16:42:30 seax1 dhclient[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:42:30 seax1 sh[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:42:30 seax1 sh[942]: enp0s3=enp0s3
+feb 20 16:52:28 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 16:52:28 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 16:52:28 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 16:52:28 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 16:52:28 seax1 dhclient[369]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:52:28 seax1 sh[369]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:52:28 seax1 sh[369]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:52:28 seax1 sh[369]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:52:28 seax1 dhclient[369]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 16:52:28 seax1 dhclient[369]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:52:30 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 16:52:30 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 16:52:33 seax1 dhclient[369]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:52:33 seax1 sh[369]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 16:52:46 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 16:52:46 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 16:52:51 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 20 16:52:51 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 20 16:52:58 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 10
+feb 20 16:52:58 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 10
+feb 20 16:53:08 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 19
+feb 20 16:53:08 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 19
+feb 20 16:53:27 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 20 16:53:27 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 20 16:53:35 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 20 16:53:35 seax1 sh[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 20 16:53:50 seax1 avahi-autoipd(enp0s3)[1028]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 16:53:50 seax1 avahi-autoipd(enp0s3)[1028]: Successfully called chroot().
+feb 20 16:53:50 seax1 avahi-autoipd(enp0s3)[1028]: Successfully dropped root privileges.
+feb 20 16:53:50 seax1 avahi-autoipd(enp0s3)[1028]: Starting with address 169.254.1.132
+feb 20 16:53:55 seax1 avahi-autoipd(enp0s3)[1028]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 16:53:59 seax1 avahi-autoipd(enp0s3)[1028]: Successfully claimed IP address 169.254.1.132
+feb 20 16:53:59 seax1 sh[1051]: enp0s3=enp0s3
+feb 20 17:01:13 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 20 17:01:21 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 14
+feb 20 17:01:35 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 15
+feb 20 17:01:50 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 20
+feb 20 17:02:10 seax1 dhclient[369]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 17:02:14 seax1 avahi-autoipd(enp0s3)[1028]: A routable address has been configured.
+feb 20 17:02:14 seax1 avahi-autoipd(enp0s3)[1028]: Callout UNBIND, address 169.254.1.132 on interface enp0s3
+feb 20 17:02:17 seax1 avahi-autoipd(enp0s3)[1028]: No longer a routable address configured, restarting probe process.
+feb 20 17:02:22 seax1 avahi-autoipd(enp0s3)[1028]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 17:02:26 seax1 avahi-autoipd(enp0s3)[1028]: Successfully claimed IP address 169.254.1.132
+feb 20 17:59:08 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 17:59:08 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 17:59:08 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 17:59:08 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 17:59:09 seax1 dhclient[440]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 17:59:09 seax1 sh[440]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 17:59:09 seax1 sh[440]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 17:59:09 seax1 sh[440]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:09 seax1 dhclient[440]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 17:59:09 seax1 dhclient[440]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:11 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 17:59:11 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 17:59:17 seax1 dhclient[440]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:17 seax1 sh[440]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:17 seax1 avahi-autoipd(enp0s3)[911]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 17:59:17 seax1 avahi-autoipd(enp0s3)[911]: Successfully called chroot().
+feb 20 17:59:17 seax1 avahi-autoipd(enp0s3)[911]: Successfully dropped root privileges.
+feb 20 17:59:17 seax1 avahi-autoipd(enp0s3)[911]: Starting with address 169.254.1.132
+feb 20 17:59:23 seax1 avahi-autoipd(enp0s3)[911]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 17:59:27 seax1 avahi-autoipd(enp0s3)[911]: Successfully claimed IP address 169.254.1.132
+feb 20 17:59:27 seax1 avahi-autoipd(enp0s3)[911]: Got SIGTERM, quitting.
+feb 20 17:59:27 seax1 avahi-autoipd(enp0s3)[911]: Callout STOP, address 169.254.1.132 on interface enp0s3
+feb 20 17:59:27 seax1 dhclient[440]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 17:59:27 seax1 sh[440]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 17:59:27 seax1 sh[440]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:27 seax1 dhclient[440]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 17:59:27 seax1 sh[1061]: enp0s3=enp0s3
+feb 20 18:04:27 seax1 dhclient[440]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 19:57:37 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 19:58:35 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 19:58:36 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 19:58:36 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 19:58:36 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 19:58:36 seax1 dhclient[401]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 19:58:36 seax1 sh[401]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 19:58:36 seax1 sh[401]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 19:58:36 seax1 sh[401]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:36 seax1 dhclient[401]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 19:58:36 seax1 dhclient[401]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:38 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 19:58:38 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 19:58:39 seax1 dhclient[401]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:39 seax1 sh[401]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:39 seax1 avahi-autoipd(enp0s3)[885]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 19:58:39 seax1 avahi-autoipd(enp0s3)[885]: Successfully called chroot().
+feb 20 19:58:39 seax1 avahi-autoipd(enp0s3)[885]: Successfully dropped root privileges.
+feb 20 19:58:39 seax1 avahi-autoipd(enp0s3)[885]: Starting with address 169.254.1.132
+feb 20 19:58:44 seax1 avahi-autoipd(enp0s3)[885]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 19:58:48 seax1 avahi-autoipd(enp0s3)[885]: Successfully claimed IP address 169.254.1.132
+feb 20 19:58:48 seax1 avahi-autoipd(enp0s3)[885]: Got SIGTERM, quitting.
+feb 20 19:58:48 seax1 avahi-autoipd(enp0s3)[885]: Callout STOP, address 169.254.1.132 on interface enp0s3
+feb 20 19:58:48 seax1 dhclient[401]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 19:58:48 seax1 sh[401]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 19:58:48 seax1 sh[401]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:48 seax1 dhclient[401]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 19:58:48 seax1 sh[1069]: enp0s3=enp0s3
+feb 20 20:11:21 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 20:11:21 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 20:11:21 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 20:11:21 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 20:11:22 seax1 dhclient[382]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:11:22 seax1 sh[382]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:11:22 seax1 sh[382]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:11:22 seax1 sh[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:11:22 seax1 dhclient[382]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:11:22 seax1 dhclient[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:11:24 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 20:11:24 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 20:11:29 seax1 dhclient[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:11:29 seax1 sh[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:11:29 seax1 sh[928]: enp0s3=enp0s3
+feb 20 20:15:23 seax1 dhclient[382]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 10.0.2.3 port 67
+feb 20 20:20:43 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 20:20:44 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 20:20:44 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 20:20:44 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 20:20:44 seax1 dhclient[384]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:20:44 seax1 sh[384]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:20:44 seax1 sh[384]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:20:44 seax1 sh[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:20:44 seax1 dhclient[384]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:20:44 seax1 dhclient[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:20:46 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 20:20:46 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 20:20:52 seax1 dhclient[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:20:52 seax1 sh[384]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:20:52 seax1 avahi-autoipd(enp0s3)[894]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 20:20:52 seax1 avahi-autoipd(enp0s3)[894]: Successfully called chroot().
+feb 20 20:20:52 seax1 avahi-autoipd(enp0s3)[894]: Successfully dropped root privileges.
+feb 20 20:20:52 seax1 avahi-autoipd(enp0s3)[894]: Starting with address 169.254.1.132
+feb 20 20:20:57 seax1 avahi-autoipd(enp0s3)[894]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 20:21:01 seax1 avahi-autoipd(enp0s3)[894]: Successfully claimed IP address 169.254.1.132
+feb 20 20:21:01 seax1 avahi-autoipd(enp0s3)[894]: Got SIGTERM, quitting.
+feb 20 20:21:01 seax1 avahi-autoipd(enp0s3)[894]: Callout STOP, address 169.254.1.132 on interface enp0s3
+feb 20 20:21:01 seax1 dhclient[384]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 20:21:01 seax1 sh[384]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 20:21:01 seax1 sh[384]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:21:01 seax1 dhclient[384]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:21:02 seax1 sh[1044]: enp0s3=enp0s3
+feb 20 20:22:58 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 20 20:22:58 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 20 20:22:58 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 20 20:22:58 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 20 20:22:59 seax1 dhclient[378]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:22:59 seax1 sh[378]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:22:59 seax1 sh[378]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:22:59 seax1 sh[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:22:59 seax1 dhclient[378]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 20 20:22:59 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:23:01 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 20 20:23:01 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 20 20:23:07 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:23:07 seax1 sh[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:23:25 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 20:23:25 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 20:23:31 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 20:23:31 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 5
+feb 20 20:23:36 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 10
+feb 20 20:23:36 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 10
+feb 20 20:23:46 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 20 20:23:46 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 8
+feb 20 20:23:54 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 16
+feb 20 20:23:54 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 16
+feb 20 20:24:10 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 20 20:24:10 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 12
+feb 20 20:24:22 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 20:24:22 seax1 sh[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 4
+feb 20 20:24:26 seax1 avahi-autoipd(enp0s3)[1032]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 20:24:26 seax1 avahi-autoipd(enp0s3)[1032]: Successfully called chroot().
+feb 20 20:24:26 seax1 avahi-autoipd(enp0s3)[1032]: Successfully dropped root privileges.
+feb 20 20:24:26 seax1 avahi-autoipd(enp0s3)[1032]: Starting with address 169.254.1.132
+feb 20 20:24:26 seax1 avahi-autoipd(enp0s3)[1032]: Routable address already assigned, sleeping.
+feb 20 20:24:26 seax1 sh[1045]: enp0s3=enp0s3
+feb 20 20:25:40 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:25:48 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:26:08 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:26:21 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:26:29 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:26:39 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:26:47 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:27:07 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:27:27 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:27:36 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:27:57 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:28:08 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:28:19 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:28:34 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:28:42 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:28:52 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:29:06 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:29:21 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:29:40 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 192.168.56.100 port 67
+feb 20 20:29:54 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:08 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:16 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:26 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:37 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:45 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:30:56 seax1 dhclient[378]: DHCPREQUEST for 192.168.56.101 on enp0s3 to 255.255.255.255 port 67
+feb 20 20:31:02 seax1 avahi-autoipd(enp0s3)[1032]: No longer a routable address configured, restarting probe process.
+feb 20 20:31:02 seax1 avahi-autoipd(enp0s3)[1032]: Got SIGTERM, quitting.
+feb 20 20:31:02 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 6
+feb 20 20:31:08 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 9
+feb 20 20:31:17 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 11
+feb 20 20:31:28 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 20
+feb 20 20:31:48 seax1 dhclient[378]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 15
+feb 20 20:32:03 seax1 avahi-autoipd(enp0s3)[1071]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 20 20:32:03 seax1 avahi-autoipd(enp0s3)[1071]: Successfully called chroot().
+feb 20 20:32:03 seax1 avahi-autoipd(enp0s3)[1071]: Successfully dropped root privileges.
+feb 20 20:32:03 seax1 avahi-autoipd(enp0s3)[1071]: Starting with address 169.254.1.132
+feb 20 20:32:09 seax1 avahi-autoipd(enp0s3)[1071]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 20 20:32:13 seax1 avahi-autoipd(enp0s3)[1071]: Successfully claimed IP address 169.254.1.132
+feb 22 09:28:54 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 22 09:28:54 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 22 09:28:54 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 22 09:28:54 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 22 09:28:54 seax1 dhclient[391]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:28:54 seax1 sh[391]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:28:54 seax1 sh[391]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:28:54 seax1 sh[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 22 09:28:54 seax1 dhclient[391]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:28:54 seax1 dhclient[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 22 09:28:56 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 22 09:28:56 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 22 09:29:01 seax1 dhclient[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 13
+feb 22 09:29:01 seax1 sh[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 13
+feb 22 09:29:14 seax1 dhclient[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 14
+feb 22 09:29:14 seax1 sh[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 14
+feb 22 09:29:28 seax1 dhclient[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 20
+feb 22 09:29:28 seax1 sh[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 20
+feb 22 09:29:48 seax1 dhclient[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 22 09:29:48 seax1 sh[391]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 7
+feb 22 09:29:55 seax1 avahi-autoipd(enp0s3)[1060]: Found user 'avahi-autoipd' (UID 101) and group 'avahi-autoipd' (GID 108).
+feb 22 09:29:55 seax1 avahi-autoipd(enp0s3)[1060]: Successfully called chroot().
+feb 22 09:29:55 seax1 avahi-autoipd(enp0s3)[1060]: Successfully dropped root privileges.
+feb 22 09:29:55 seax1 avahi-autoipd(enp0s3)[1060]: Starting with address 169.254.1.132
+feb 22 09:30:00 seax1 avahi-autoipd(enp0s3)[1060]: Callout BIND, address 169.254.1.132 on interface enp0s3
+feb 22 09:30:04 seax1 avahi-autoipd(enp0s3)[1060]: Successfully claimed IP address 169.254.1.132
+feb 22 09:30:04 seax1 sh[1082]: enp0s3=enp0s3
+feb 22 09:33:21 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 22 09:33:22 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 22 09:33:22 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 22 09:33:22 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 22 09:33:22 seax1 dhclient[443]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:33:22 seax1 sh[443]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:33:22 seax1 sh[443]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:33:22 seax1 sh[443]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 6
+feb 22 09:33:22 seax1 dhclient[443]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 09:33:22 seax1 dhclient[443]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 6
+feb 22 09:33:24 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 22 09:33:24 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 22 09:33:28 seax1 dhclient[443]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 9
+feb 22 09:33:28 seax1 sh[443]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 9
+feb 22 09:33:28 seax1 sh[443]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 09:33:28 seax1 dhclient[443]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 09:33:28 seax1 sh[916]: enp0s3=enp0s3
+feb 22 10:04:10 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 22 10:04:11 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 22 10:04:11 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 22 10:04:11 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 22 10:04:11 seax1 dhclient[378]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:04:11 seax1 sh[378]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:04:11 seax1 sh[378]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:04:11 seax1 sh[378]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:04:11 seax1 dhclient[378]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:04:11 seax1 dhclient[378]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:04:13 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 22 10:04:13 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 22 10:04:16 seax1 dhclient[378]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:04:16 seax1 sh[378]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:04:16 seax1 sh[927]: enp0s3=enp0s3
+feb 22 10:14:27 seax1 kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+feb 22 10:14:28 seax1 systemd[1]: Expecting device sys-subsystem-net-devices-enp0s3.device - /sys/subsystem/net/devices/enp0s3...
+feb 22 10:14:28 seax1 systemd[1]: Found device sys-subsystem-net-devices-enp0s3.device - 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+feb 22 10:14:28 seax1 systemd[1]: Started ifup@enp0s3.service - ifup for enp0s3.
+feb 22 10:14:28 seax1 dhclient[383]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:14:28 seax1 sh[383]: Listening on LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:14:28 seax1 sh[383]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:14:28 seax1 sh[383]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:14:28 seax1 dhclient[383]: Sending on   LPF/enp0s3/08:00:27:00:00:01
+feb 22 10:14:28 seax1 dhclient[383]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:14:28 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+feb 22 10:14:28 seax1 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+feb 22 10:14:31 seax1 dhclient[383]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:14:31 seax1 sh[383]: DHCPREQUEST for 10.0.2.15 on enp0s3 to 255.255.255.255 port 67
+feb 22 10:14:31 seax1 sh[930]: enp0s3=enp0s3
+feb 24 19:02:07 seax1 kernel: e1000: enp0s3 NIC Link is Down
+feb 24 19:02:11 seax1 kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX

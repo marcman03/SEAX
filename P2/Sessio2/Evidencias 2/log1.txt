@@ -1,0 +1,30 @@
+[2024/03/25 18:11:08.756823,  2] ../../source3/smbd/smb2_service.c:840(make_connection_snum)
+  markuspc (ipv4:192.168.1.72:62000) signed connect to service entel initially as user entel (uid=1000, gid=1001) (pid 1619)
+[2024/03/25 18:11:25.094597,  2] ../../source3/smbd/smb2_service.c:840(make_connection_snum)
+  markuspc (ipv4:192.168.1.72:62000) signed connect to service datos initially as user entel (uid=1000, gid=1001) (pid 1619)
+[2024/03/25 18:11:34.921209,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/Nuevo Documento de texto.txt read=Yes write=Yes (numopen=6)
+[2024/03/25 18:11:35.504026,  2] ../../source3/smbd/smb2_service.c:933(close_cnum)
+  markuspc (ipv4:192.168.1.72:62000) closed connection to service entel
+[2024/03/25 18:11:35.923011,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/Nuevo Documento de texto.txt read=No write=No (numopen=6)
+[2024/03/25 18:11:35.924077,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/Nuevo Documento de texto.txt (numopen=4) NT_STATUS_OK
+[2024/03/25 18:11:37.977417,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/Nuevo Documento de texto.txt (numopen=1) NT_STATUS_OK
+[2024/03/25 18:11:37.977814,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/Nuevo Documento de texto.txt read=No write=No (numopen=3)
+[2024/03/25 18:11:37.980985,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/test1.txt.txt (numopen=1) NT_STATUS_OK
+[2024/03/25 18:11:38.021903,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/test1.txt.txt read=No write=No (numopen=6)
+[2024/03/25 18:11:38.022905,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/test1.txt.txt (numopen=4) NT_STATUS_OK
+[2024/03/25 18:11:38.028366,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/test1.txt.txt read=No write=No (numopen=6)
+[2024/03/25 18:11:38.029260,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/test1.txt.txt (numopen=4) NT_STATUS_OK
+[2024/03/25 18:11:38.031004,  2] ../../source3/smbd/open.c:1678(open_file)
+  entel opened file test/test1.txt.txt read=No write=No (numopen=6)
+[2024/03/25 18:11:38.031891,  2] ../../source3/smbd/close.c:830(close_normal_file)
+  entel closed file test/test1.txt.txt (numopen=4) NT_STATUS_OK

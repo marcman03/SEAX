@@ -1,0 +1,12 @@
+Dropped protocol specifier '.inet' from 'wlxf02f74746821.inet'. Using 'wlxf02f74746821' (ifindex=4).
+Killed old client process
+Internet Systems Consortium DHCP Client 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   LPF/wlxf02f74746821/f0:2f:74:74:68:21
+Sending on   Socket/fallback
+DHCPRELEASE of 192.168.1.160 on wlxf02f74746821 to 192.168.1.1 port 67
+Dropped protocol specifier '.dhclient' from 'wlxf02f74746821.dhclient'. Using 'wlxf02f74746821' (ifindex=4).

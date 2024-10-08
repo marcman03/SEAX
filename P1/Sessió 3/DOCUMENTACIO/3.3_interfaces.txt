@@ -1,0 +1,24 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug enp0s3
+iface enp0s3 inet dhcp
+
+auto wlxf02f74746821 
+iface wlxf02f74746821 inet static
+address 192.168.1.10
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameserver 8.8.8.8
+wpa-ssid MIWIFI_6hcH
+wpa-psk tefUeUA6
+
+#auto wlxf02f74746821 
+#iface wlxf02f74746821 inet dhcp

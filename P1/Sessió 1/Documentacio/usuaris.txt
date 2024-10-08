@@ -1,0 +1,2 @@
+entel:x:1000:1000:entel,,,:/home/entel:/bin/bash
+root:x:0:0:root:/root:/bin/bash

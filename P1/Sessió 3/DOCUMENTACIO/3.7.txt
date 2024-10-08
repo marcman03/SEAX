@@ -1,0 +1,8 @@
+4: wlxf02f74746821: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether f0:2f:74:74:68:21 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.50/24 scope global wlxf02f74746821
+       valid_lft forever preferred_lft forever
+    inet6 fd6d:c874:6884:27e4:f22f:74ff:fe74:6821/64 scope global dynamic mngtmpaddr 
+       valid_lft 1438sec preferred_lft 1438sec
+    inet6 fe80::f22f:74ff:fe74:6821/64 scope link 
+       valid_lft forever preferred_lft forever

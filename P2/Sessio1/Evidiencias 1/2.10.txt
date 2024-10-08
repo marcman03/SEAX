@@ -1,0 +1,4 @@
+root         679  0.0  0.9  15412  9368 ?        Ss   18:28   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         774  0.0  1.0  17392 10700 ?        Ss   18:32   0:00 sshd: entel [priv]
+entel        780  0.0  0.6  17652  6652 ?        S    18:32   0:00 sshd: entel@pts/0
+entel        824  0.0  0.2   6352  2076 tty1     S+   18:40   0:00 grep ssh

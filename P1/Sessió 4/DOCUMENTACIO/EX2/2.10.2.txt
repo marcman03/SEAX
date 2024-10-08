@@ -1,0 +1,8 @@
+# Nmap 7.93 scan initiated Sun Mar 10 12:45:10 2024 as: nmap -oN 2.10.2.txt 10.0.2.15
+Nmap scan report for seax1 (10.0.2.15)
+Host is up (0.0000030s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+# Nmap done at Sun Mar 10 12:45:10 2024 -- 1 IP address (1 host up) scanned in 0.13 seconds

@@ -1,0 +1,5 @@
+[    1.027669] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    3.525906] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    3.527062] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[ 2973.921975] e1000: enp0s3 NIC Link is Down
+[ 2977.954404] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX

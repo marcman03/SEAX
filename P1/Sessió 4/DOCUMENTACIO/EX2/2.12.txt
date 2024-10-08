@@ -1,0 +1,10 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-03-10 13:38 CET
+Nmap scan report for www.google.com (142.250.185.4)
+Host is up (0.0038s latency).
+Other addresses for www.google.com (not scanned): 2a00:1450:4003:80d::2004
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 17.99 seconds

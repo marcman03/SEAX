@@ -1,0 +1,5 @@
+1.enp0s3 [Up, Running, Connected]
+2.enp0s8 [Up, Running, Connected]
+3.enp0s9 [Up, Running, Connected]
+4.any (Pseudo-device that captures on all interfaces) [Up, Running]
+5.lo [Up, Running, Loopback]

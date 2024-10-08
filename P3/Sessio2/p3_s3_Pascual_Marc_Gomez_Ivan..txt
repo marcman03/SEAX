@@ -1,0 +1,358 @@
+﻿1- Configurar un servei de DNS.
+
+
+     - El servei estarà mantingut per dos servidors "dns1" i "dns2" que compartiran les següents caractarístiques:
+
+
+                + Resoldran les peticions utilitzant forwarders.
+
+
+                + Acceptaran peticions recursives només per les xarxes internes.
+
+
+                + Disposen d'un servidor de SSH.
+
+
+     - Es defineixen dos dominis: "seax.edu" (màquines xarxes internes) i "public.seax.edu" (serveis al cloud de la UPC). 
+
+
+    - Cada domini té un servidor màster i un slave diferents.
+
+
+     - El domini "seax.edu" te una zona directa i una inversa
+
+
+                + Inclourà totes les adreces IP de totes les màquines de l'escenari llevat els routers (ie. servidors DNS, monitors i servidor nagios).
+
+
+                + Als servidors "dns1" i "dns2" se'ls crearà uns àlias anomenats "ssh1" i "ssh2", respectívament.
+
+
+                + Al servidor "nagios" se li crearà un àlias anomenat "monitor".
+
+
+                + Estarà mantingut per dos servidors: "dns1" com a màster i "dns2" com esclau.
+
+
+        - El domini "seax.public.edu" només té zona directa  
+
+
+                + "dns2" en serà el màster i "dns1" l'esclau. 
+
+
+                + Contindrà les màquines de la DMZ "dns1" i "dns2" amb els mateixos àlies que abans, ie. "ssh1" i "ssh2".
+
+
+                + Les màquines "dns1" i "dns2" compartiran la mateixa IP, la de la interfície que dóna a la xarxa troncal del router d'accés. (Nota: si no podeu fixar aquesta IP, us la inventeu, per ex. 192.168.1.1).
+
+
+                + També els següents serveis situats al cloud de la UPC: la web "www.public.seax.edu", amb IPs 147.83.2.135 i 2001:40b0:7500:1::21
+
+
+    - Cal verificar que les zones estan ben escrites.
+
+
+    - Cal verificar el funcionament del servei resolent consultes dels dominis propis i d'altres.
+
+
+    - (opcional) Investigueu i comenteu si hi ha algun mecanisme que permeti implementar una coordinació del DNS i el DHCP, en un mateix servidor.
+
+
+3- Protecció dels servidors de DNS
+
+
+        - Apliqueu les directrius de seguretat específiques pels servidors definides a la sessió 1 i 2
+
+
+        - Expliqueu com podríeu fer que només fossin accessibles els serveis de de DNS i SSH i, en el cas del servei SSH només des de les adreces IP 10.1.10.11 i 10.1.20.11.
+
+
+        - (Opcional) Implementeu i el punt anterior i verifiqueu el seu funcionament.
+
+
+4- Lliurar els resultats.
+
+
+Mitjançant Atenea (2 fitxers).
+
+
+    - Redactar l'informe de la pràctica p3_s3_cognom1_nom.txt.
+
+
+    - Realitzar les proves necessàries per justificar els resultats i encapsular els fitxers necessaris en el fitxer p3_s3_cognom1_nom.zip.
+
+
+Mitjançant Google Drive (màquines virtuals)
+
+
+        - Compartir amb rafael.vidal@upc.edu una carpeta a Google Drive (UPC) amb les VMs dels 2 DNSs.
+
+
+Important:
+
+
+        - L'informe de la pràctica ha de contenir l'enllaç a la carpeta amb les VMs. 
+
+
+        - Les VMs han de contenir una còpia de l’informe al directori /root.
+
+
+5- A títol orientatiu el resultat de la pràctica cal que doni resposta a les següents qüestions:
+
+
+
+
+Configuració Prèvia.
+Primer de tot només hem configurat només una interficie, perquè estem utilitzant el router de la pràctica anterior.
+Per realitzar la pràctica hem clonat el monitorDMZ 
+DNS1:
+eth-dmz → IP: 10.1.10.3 -MAC: 08:00:27:01:10:03
+
+
+DNS2:
+eth-dmz → IP: 10.1.10.4 -MAC: 08:00:27:01:10:04
+
+
+les dos interfaces estan conectades per red interna en la red dmz.
+
+
+    - Quines màquines i adreces IP formen el domini? (treballeu amb adreces privades)
+Les màquines que poden tenir  accés al dns són els monitors i el nagios.
+    - Cal instal·lar algun paquet de programari?
+
+
+ Instalarem dnsutils i bind9, el dnsutils ens permet utilitzar l’eina dig, mentre que bind9 sera el programa principal que ens permetrà cear i configurar el nostre servidor DNS.
+
+
+
+
+    - Com es configura un servidor per ser màster (o esclau) d'un domini?
+
+
+A la maquina DNS1 obrim /etc/bind/named.conf.local
+
+
+I aquí farem la següent configuració:
+
+
+
+
+zone "seax.edu" IN {
+        type master;
+        file "/etc/bind/db.seax.edu";
+        allow-transfer { 10.1.10.4; };
+        also-notify { 10.1.10.4; };
+};
+
+
+zone "public.seax.edu" IN {
+        type slave;
+        file "/var/cache/bind/db.public.seax.edu";
+        masters {10.1.10.4;};
+};
+
+
+zone "10.1.in-addr.arpa" IN {
+        type master;
+        file "/etc/bind/db.1.10";
+        allow-transfer { 10.1.10.4; };
+        also-notify { 10.1.10.4; };
+};
+
+
+
+
+Podem veure que hi ha 3 zones, en la zona seax.edu el DNS1 es master i en la zona public.seax.edu el DNS2 es esclau
+
+
+I en el DNS2
+zone "seax.edu" IN {
+        type slave;
+        file "/var/cache/bind/db.seax.edu";
+        masters{ 10.1.10.3; };
+};
+
+
+zone "public.seax.edu" IN {
+        type master;
+        file "/etc/bind/db.public.seax.edu";
+        allow-transfer {10.1.10.4;};
+        also-notify {10.1.10.4;};
+};
+
+
+zone "10.1.in-addr.arpa" IN {
+        type slave;
+        file "/var/cache/bind/db.1.10";
+        masters {10.1.10.3;};
+};
+
+
+Podem veure que on el dns1 era master el dns2 es slave i al revés
+
+
+
+
+    - Com es delega una part d'una domini?
+DNS1 db.1.10
+
+
+;
+; BIND data file for local loopback interface
+;
+$TTL        604800
+@        IN        SOA        seax.edu. root.seax.edu. (
+                              2                ; Serial
+                         604800                ; Refresh
+                          86400                ; Retry
+                        2419200                ; Expire
+                         604800 )        ; Negative Cache TTL
+;
+@        IN        NS        localhost.
+3.10        IN        PTR        dns1.seax.edu.
+4.10        IN        PTR        dns2.seax.edu.
+5.10        IN        PTR        nagios.seax.edu.
+11.10        IN        PTR        mondmz.seax.edu.
+
+
+
+
+
+
+
+
+    - Com es pot verificar que un servidor fa d'esclau d'un altre?
+Podem asegurar-nos de que un servidor es slave del altre si fem ls en el /var/cache/bind/ i veiem que ens surt els fitxers de on es slave
+En DNS2 veiem que ens surt les dos zones que es slave
+db.1.10
+db.seax.edu
+managed-keys.bind
+managed-keys.bind.jnl
+
+
+
+
+
+
+    - Com es configura una zona en un servidor (directa i inversa)?
+Una zona inversa has de posar el seguent
+DNS1 db.1.10
+
+
+;
+; BIND data file for local loopback interface
+;
+$TTL        604800
+@        IN        SOA        seax.edu. root.seax.edu. (
+                              2                ; Serial
+                         604800                ; Refresh
+                          86400                ; Retry
+                        2419200                ; Expire
+                         604800 )        ; Negative Cache TTL
+;
+@        IN        NS        localhost.
+3.10        IN        PTR        dns1.seax.edu.
+4.10        IN        PTR        dns2.seax.edu.
+5.10        IN        PTR        nagios.seax.edu.
+11.10        IN        PTR        mondmz.seax.edu.
+
+
+una zona directa 
+DNS1 db.seax.edu
+
+
+;
+; BIND data file for local loopback interface
+;
+$TTL        604800
+@        IN        SOA        seax.edu. root.seax.edu. (
+                              2                ; Serial
+                         604800                ; Refresh
+                          86400                ; Retry
+                        2419200                ; Expire
+                         604800 )        ; Negative Cache TTL
+;
+@        IN        NS        localhost.
+@        IN        A        127.0.0.1
+@        IN        AAAA        ::1
+dns2        IN        A        10.1.10.4
+mondmz        IN        A        10.1.10.11
+
+
+
+
+    - Com es controla l'acceptació de peticions recursives?
+
+
+    - Com es comprova la sintaxi d'un fitxer de zona?
+fent en la carpeta /etc/bind/ named-checkconf ens diu si hi ha algun error
+
+
+    - Com es comprova que un servidor funciona correctament?
+Fent ping podem veure que té conectivitad entre servidors DNS1 i DNS2 veure evidencia ping1.txt
+També podem veure que el monitor-client té conectivitat al servidor DNS1 i DNS2 veure evidencia ping2.txt (ping desde el monitor-client ald DNS1)
+I podem veure que el monitor-dmz té conectivitad al servidor DNS1 i DNS2 veure evidencia ping3.txt(ping desde el monitor-dmz al DNS2)
+
+
+    - Com es verifica que el domini funciona correctament? 
+En el DNS1:
+Podem fer dig dns.public.edu,veure evidencia dig0.txt
+Podem fer dig desde el master fent dig dns.seax.edu, veure evidencia dig1.txt
+Podem resolver noms a partir del fitxer de zones inverses
+fent dig -x 10.1.10.3 en el dns1 veure en evidencia dig2.txt
+dig -x 10.1.10.4 en el dns1 veure en evidencia dig3.txt
+EN el DNS2:
+
+Podem fer en el dns2 dig dns.seax.edu dig4.txt
+i també dig dns.public.seax.edu dig5.txt
+    - Relacionat amb l'anterior, quines eines de consola hi ha per fer aquest comprovació? Com s'han d'utilitzar?
+l’eina dig i ping 
+
+
+
+
+
+
+    - Com fer que un servidor de DNS resolgui peticions de dominis pels que no és màster/esclau?
+
+
+Per poder resoldre peticions que no son “seves” i per tant no es master ni esclau, hem d’activar la recursio, que es un parametre que es pot afegir a l’arxiu de configuracio /etc/bind/named.conf.options
+
+
+per guardar la configuracio farem un systemctl restart bind9
+
+
+     - Com es limiten els accesso als serveis d'una màquina?
+
+
+Depend el servei que volem restringir, podem utilitzar un tipus de limitació o una altre, per ssh, com vam veure a la sessió anterior podem utulitzar fail2ban per restringir l’acces d’una IP que hagi fallat el login 3 vegades, durant 5 minuts.
+
+
+apt install fail2ban, i seguint les configuracions de la wiki proporcionada a clase, afegint els camps 
+[sshd]
+maxrety = 3 
+al /fail2ban/config/jail.local i per arrelgar el bug esmentat DEFAULT]:
+
+
+        logtarget = SYSTEMD-JOURNAL
+        backend = systemd
+        enabled=true
+        bantime = 5m
+
+
+ara per evitar que perdem la configuració al botar la maquina executarem les següents comandes:          update-rc.d fail2ban defaults
+        systemctl restart fail2banservice
+        service fail2ban start
+
+
+d’aquesta manera queda configurat el fail2ban.
+
+
+     - Com es comprova que aquests accesos han estat correctament limitats?
+
+
+
+En aquesta ruta, /var/log/fail2ban.log trobem el log que guarda l’actitvitat registrada, i per tant els accesos que hi han bloquejats.
+
+
+Per altre costat hem de veure abans de provar els accessos que el servei fail2ban est aixecat amb: fail2ban-client status

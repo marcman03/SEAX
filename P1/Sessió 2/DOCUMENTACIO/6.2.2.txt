@@ -1,0 +1,9 @@
+PING server1 (127.0.25.2) 56(84) bytes of data.
+64 bytes from server1 (127.0.25.2): icmp_seq=1 ttl=64 time=0.024 ms
+64 bytes from server1 (127.0.25.2): icmp_seq=2 ttl=64 time=0.027 ms
+64 bytes from server1 (127.0.25.2): icmp_seq=3 ttl=64 time=0.025 ms
+64 bytes from server1 (127.0.25.2): icmp_seq=4 ttl=64 time=0.081 ms
+
+--- server1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3070ms
+rtt min/avg/max/mdev = 0.024/0.039/0.081/0.024 ms

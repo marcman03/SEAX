@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.18.24-1-Debian <<>> dns.seax.edu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 60598
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: d4dcdf43169242eb010000006643baf3dc05f5948726310e (good)
+;; QUESTION SECTION:
+;dns.seax.edu.			IN	A
+
+;; AUTHORITY SECTION:
+seax.edu.		604800	IN	SOA	seax.edu. root.seax.edu. 2 604800 86400 2419200 604800
+
+;; Query time: 0 msec
+;; SERVER: 10.1.10.3#53(10.1.10.3) (UDP)
+;; WHEN: Tue May 14 21:26:43 CEST 2024
+;; MSG SIZE  rcvd: 110
+

@@ -1,0 +1,37 @@
+[    6.501525] mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+[   19.298816] wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+[   20.295260] wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+[   20.343218] wlxf02f74746821: authenticated
+[   20.344630] wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+[   20.350473] wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=38)
+[   20.444833] wlxf02f74746821: associated
+[   20.485693] wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+[   20.576824] IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+[   83.716318] wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+[  102.730988] wlxf02f74746821: authenticate with c6:ed:dc:4e:87:d7
+[  103.705593] wlxf02f74746821: send auth to c6:ed:dc:4e:87:d7 (try 1/3)
+[  103.753171] wlxf02f74746821: authenticated
+[  103.754752] wlxf02f74746821: associate with c6:ed:dc:4e:87:d7 (try 1/3)
+[  103.763822] wlxf02f74746821: RX AssocResp from c6:ed:dc:4e:87:d7 (capab=0x511 status=0 aid=29)
+[  103.851662] wlxf02f74746821: associated
+[  103.851912] wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:4e:87:d7
+[  104.914551] IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+[  598.877514] wlxf02f74746821: deauthenticating from c6:ed:dc:4e:87:d7 by local choice (Reason: 3=DEAUTH_LEAVING)
+[  612.584223] wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+[  613.553283] wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+[  613.600489] wlxf02f74746821: authenticated
+[  613.603986] wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+[  613.607840] wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=39)
+[  613.703418] wlxf02f74746821: associated
+[  613.788452] IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+[  613.811585] wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9
+[ 4187.929162] wlxf02f74746821: deauthenticating from c6:ed:dc:65:22:b9 by local choice (Reason: 3=DEAUTH_LEAVING)
+[ 4200.287408] mt76x0u 1-1:1.0 wlxf02f74746821: renamed from wlan0
+[ 4220.389228] wlxf02f74746821: authenticate with c6:ed:dc:65:22:b9
+[ 4221.387437] wlxf02f74746821: send auth to c6:ed:dc:65:22:b9 (try 1/3)
+[ 4221.437552] wlxf02f74746821: authenticated
+[ 4221.441062] wlxf02f74746821: associate with c6:ed:dc:65:22:b9 (try 1/3)
+[ 4221.448583] wlxf02f74746821: RX AssocResp from c6:ed:dc:65:22:b9 (capab=0x511 status=0 aid=54)
+[ 4221.541322] wlxf02f74746821: associated
+[ 4221.625633] IPv6: ADDRCONF(NETDEV_CHANGE): wlxf02f74746821: link becomes ready
+[ 4221.713371] wlxf02f74746821: Limiting TX power to 23 (23 - 0) dBm as advertised by c6:ed:dc:65:22:b9

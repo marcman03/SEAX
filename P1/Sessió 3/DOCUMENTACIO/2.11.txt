@@ -1,0 +1,2 @@
+ID TYPE DEVICE      SOFT         HARD
+ 2 wlan phy2   bloqueado desbloqueado

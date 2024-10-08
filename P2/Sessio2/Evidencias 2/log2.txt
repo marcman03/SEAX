@@ -1,0 +1,20 @@
+[2024/03/25 18:03:10.943595,  2] ../../source3/auth/auth.c:324(auth_check_ntlm_password)
+  check_ntlm_password:  authentication for user [entel] -> [entel] -> [entel] succeeded
+[2024/03/25 18:03:10.943747,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[homes]"
+[2024/03/25 18:03:10.943782,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[printers]"
+[2024/03/25 18:03:10.943802,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[print$]"
+[2024/03/25 18:03:10.943817,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[datos]"
+[2024/03/25 18:03:22.455539,  2] ../../source3/auth/auth.c:324(auth_check_ntlm_password)
+  check_ntlm_password:  authentication for user [entel] -> [entel] -> [entel] succeeded
+[2024/03/25 18:03:22.455676,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[homes]"
+[2024/03/25 18:03:22.455710,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[printers]"
+[2024/03/25 18:03:22.455731,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[print$]"
+[2024/03/25 18:03:22.455745,  2] ../../source3/param/loadparm.c:2897(lp_do_section)
+  Processing section "[datos]"

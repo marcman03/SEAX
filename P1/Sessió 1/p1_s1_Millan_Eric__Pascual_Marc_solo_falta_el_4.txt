@@ -1,0 +1,528 @@
+Pràctica 1 - Interfícies de xarxa.
+Sessió 1 - Creació d'un servidor Debian amb VirtualBox.
+
+Membres:
+Eric Millan Lombrte
+Marc Pascual Desentre
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+1- Entendre el funcionament i opcions de VirtualBox.
+
+
+    - Com s’instal·la VirtualBox i per a què serveix?
+
+Per instalar Virtual Box anem a la pagina https://www.virtualbox.org/wiki/Downloads
+i cliquem en Windows hosts si estem utilitzant windows.
+
+VirtualBox serveix per tenir un entorn virtual on s'executen altres sistemes operatius, aplicacions i desenvolupament de software sense 
+interferir amb el sistema principal. Això fa que sigui molt util a l’hora d'executar multiples sistemas operatius simultáneamente. 
+Instalaciones de software més senzilles on els proveïdors de software pueden utilizar maquines virtuals per distribuir configuracions 
+completes de software. També, a l’hora de fer proves, ja que amb un sistema de instantaneas es pot recuperar versions anteriors. 
+
+ - Evidència d'ús: 
+Si busquem l’aplicació virtualBox veiem que està. 
+Si Iniciem la virtualBox -> Ayuda veiem que tenim la versió més actualitzada
+
+  - Bibliografia.
+https://www.virtualbox.org/wiki/Downloads
+https://www.virtualbox.org/manual/ch01.html#virt-why-useful
+
+
+
+
+    - Com s’instal·la VirtualBox Extension Pack i per a què serveix?
+
+Per instalar VirtualBox Extension Pack anem a la pagina https://www.virtualbox.org/wiki/Downloads i Anem a la secció 
+de Box 7.0.14 Oracle VM VirtualBox Extension Pack i cliquem en  All supported platforms. I al executar el executable 
+veiem que en la VirtualBox s’han agregat el paquet de extensions.
+
+ VirtualBox Extension Pack serveix per:
+1->Protocol de Visualització Remota de VirtualBox (VRDP): Permet visualitzar màquines virtuals de forma remota, facilitant-ne 
+el control i la gestió des d'un altre ordinador. 
+https://www.virtualbox.org/manual/ch07.html#vrde
+
+2->Passthrough de la càmera web de l'amfitrió: Permet utilitzar la càmera web del dispositiu amfitrió a la màquina virtual, 
+millorant l'experiència d'ús d'aplicacions que requereixen accés a la càmera. https://www.virtualbox.org/manual/ch09.html#webcam-passthrough.
+
+3->ROM d'arrencada d'Intel PXE: Facilita l'arrencada de màquines virtuals utilitzant la tecnologia d'arrencada de xarxa 
+PXE d'Intel, útil en entorns de xarxa per realitzar instal·lacions i configuracions 
+remotes.https://www.virtualbox.org/manual/ch09.html#diskencryption.
+
+4->Xifratge de les imatges de disc amb l'algoritme AES: Proporciona la capacitat de xifrar les imatges de disc de les màquines 
+virtuals utilitzant l'algoritme de xifratge AES, assegurant la seguretat de les dades emmagatzemades a les imatges 
+de disc.https://www.virtualbox.org/manual/ch01.html#cloud-integration.
+
+5->Integració amb funcionalitats del núvol d'Oracle: Ofereix integració amb les funcionalitats del núvol d'Oracle, 
+permetent la gestió i administració de màquines virtuals en entorns de núvol d'Oracle.https://www.virtualbox.org/manual/ch02.html#install-ext-pack.
+
+
+Aquestes característiques amplien la funcionalitat de VirtualBox, oferint una major flexibilitat i capacitats 
+per a usuaris que necessitin funcions avançades als seus entorns virtuals.
+    - Evidència d'ús.
+
+Per veure que s’ha incorporat correctament el extension pack:
+1->Iniciem VirtualBox
+2->Anem a archivo -> Herramientas -> Administrador de paquetes de extension i veurem quin paquet esta instalat i quina versió
+3->Ens surt Nom = Oracle VM VirtualBox Extension Pack; Versión = 7.0.14r161095
+
+   - Bibliografia.
+https://www.virtualbox.org/manual/ch01.html#intro-installing
+https://www.virtualbox.org/wiki/Downloads
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+2- Entendre el funcionament de les màquines virtuals.
+    - Com es crea una màquina virtual?
+Per crea una maquina virtual amb les propietats que estan especificades hem de fer el seguent:
+
+1-> Hem descargat la imatge en  https://www.debian.org/download.es.html
+2-> Cliquem en maquina → Nueva → modo experto
+	a->Posem el nom  seax1.epsevg.upc.edu
+	b->Seleccionem la iso prèviament descargada
+	c-> Cliquem a omitir instalacion desatendida
+	d-> En hardware 
+		d1->Memoria base: 1024 MB
+		d2-> Procesador 1
+	e-> Disco Duro 
+		e1-> VDI de 4GB
+
+3-> Accedim a configuración de la máquina creada
+	a-> configuración → Sistema → Procesador 
+		a1-> Cliquem en Habilitar PAE/NX 
+	b-> configuracion-> Red
+		b1-> Canviem la direccion MAC. Tenim que tenir en compte que  Els primers 6 valors de la MAC son reservats pel fabricant. 
+		Els valors (el 7 fins el 12) son els valors variables que podem configurar.
+		Hem definit l'últim valor com l’identificador de la màquina virtual i la resta amb zeros per mantenir una identificació 
+		més senzilla. És a dir quedaria així: 080027000001.
+4-> Per compartir la carpeta.
+	a-> Configuració → Carpetas compartidas. 
+		a1-> seleccionem la ruta de la carpeta de la maquina host
+		a2-> Posem el nombre de la carpeta
+		a3-> El punt de montatge que ha de ser /root/scripts
+		a4-> Posem amb un tick Automontar y Hacer permanente
+	b-> Un cop iniciada la maquina instalem els guests additions( Més endavant diem com)
+	c-> creamos la carpeta scripts en la ruta anterior
+		c1-> mkdir /root/scripts
+
+
+    - Evidència d'ús.
+Per comprovar que la carpeta esta compartida hem creat una carpeta en la carpeta del host i veiem que la carpeta surt en la carpeta compartida de la màquina virtual.
+
+   - Bibliografia.
+https://www.virtualbox.org/manual/ch04.html#sharedfolders
+https://www.virtualbox.org/manual/ch01.html#create-vm-wizard
+https://www.debian.org/download.es.html
+
+
+
+
+    - Com es poden connectar dispositius USB a la màquina virtual?
+
+Per poder conectar el dispositiu anem a Configuracion -> USB i añadim el usb que estem utilitzant en filtros de dispositivo USB, i quan iniciem la maquina ya estarà el pendrive.
+Fent la comanda blkid > usb.txt(per redirigir el output) podem veure que el pendrive esta en una partició en el meu cas en el /dev/sdb1.
+Veure el OUTPUT en el fitxer de documentació 2.2
+
+Per poder utilitzar el pendrive haurem de montar el pen. Per fer això creem una carpeta en media que es digui usb fent i el montem fent:
+mkdir media/usb
+mount -t vfat(el tipus de pen que tinguis) /dev/sdb1 /media/usb
+y ya podem accedir al contigut del pen.
+
+    - Bibliografia.
+No hem utilitzat bibliografia perquè era coneixement que ja sabíem
+
+
+
+    - Per a què serveixen i com s’instal·len les Guest Additions?
+
+Les Guest Additions ofereixen diverses característiques útils. 
+Per exemple serveixen per:
+- Integrar el punter del mouse de la màquina virtual amb la maquina host. Així només tenim el mateix punter per les dues màquines.
+- Compartir carpetas/directoris entre la màquina virtual i la maquina host.
+- Possibilitat de compartir portapapeles.
+- Millora la qualitat de video.
+- Millor redimensió del display de la terminal.
+- Millora la sincronització entre les màquines.
+- Logins automatitzats.
+
+Per poder instalar el guests additions cal instalar el paquet dkms amb la següent comanda:
+→ apt install dkms
+
+Insertem el CD - ROM(Dispositivos →Insertar Imagen de CD de los complementos del invitado) i el montem en el /mnt.
+Realitzem  el mount del CD de les guests additions:
+→ mount /dev/cdrom /mnt
+
+I abans d’ejecutar l’executable cal instalar un altre paquet anomenat bzip2 (igual que el dkms).
+Llavors en el /mnt fem la següent comanda:
+→ sh ./VBoxLinuxAdditions.run
+
+Amb la commanda lsmod | grep vbox, podem veure si tenim ben instalat les guests vboxsf                 
+
+45056  2
+vboxguest              49152  3 vboxsf
+vboxvideo              32768  0
+drm_vram_helper        20480  1 vboxvideo
+drm_ttm_helper         16384  3 vmwgfx,drm_vram_helper,vboxvideo
+drm_kms_helper        204800  3 vmwgfx,drm_vram_helper,vboxvideo
+drm                   614400  8 vmwgfx,drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttmadditions.
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch04.html#additions-windows
+Apartado 4.2. Installing and Maintaining Guest Addition
+
+
+
+
+    - Com es pot accedir remotament al terminal de la màquina virtual?
+
+Per accedir remotament a la màquina virtual hi ha una eina que dona virtualBox anomenada Remote Display (VRDP). 
+
+Per accedir remotament has de fer el seguien desde la maquina host.
+1-> Obrir una terminal on esta la carpeta de oracle/VirtualBox(on hagis instalat la virtualBox)
+2-> Executar la seguent comanda per llistar els noms y UUID de les maquines virtuals. 
+→ .\VBoxManage.exe list vms
+
+Hem surt el seguent output:
+"ADSOTRAININGS" {9b6e3f3c-cb69-4f6d-91b7-a6cc7a80f09e}
+"DEVIAN" {3e8f6245-ff60-4717-8b53-6a8b9eaeea59}
+"seax1.epsevg.upc.edu" {248a3e5c-30cb-4bce-b621-eeffae915657}
+"seax2.epsevg.upc.edu" {0580258a-8daa-44f7-90f8-9c5a196b334d}
+
+Copiem el UUID de la maquina que volem accedir remotament en el meu cas seax1.epsevg.upc.edu, i introduim la seguents comandes per activar el servidor VRDP amb el port que volguem(dins dels permitits) en la maquina que volguem.
+→.\VBoxManage.exe VM-name --vrde-port 5000
+
+On posas el port que vulguis( aquesta comanda serveix per si vols utilitzar per remot més d’una maquina virtual) 
+→.\VBoxManage.exe  modifyvm VM-name --vrde on 
+
+	On VM-name introdueixes la UUID o el nom de la maquina que vols accedir remotament. 
+Executas la màquina virtual on et volguis conectar
+Per ultim, poses → mstsc en la terminal. S’obre una finestra que posa Conexion a escritorio Remoto i poses la ip de la maquinaHost seguit amb dos punts y el port que hagis posat(xxxx:3389(el estandard si no cambias el port))
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch07.html
+
+
+
+    - Com es poden intercanviar fitxers amb una màquina virtual?
+
+Per intercanviar fitxers entre el sistema anfitrió i una màquina virtual en Oracle VM VirtualBox, una opció és utilitzar la funció de "drag and drop" (arrastrar y soltar). Aquesta funció permet moure arxius i carpetes de manera fàcil i intuïtiva entre els dos sistemes. Per fer-ho, simplement has d'arrossegar els fitxers desitjats des de la finestra de la màquina virtual fins al teu sistema anfitrió, o viceversa.
+
+Abans de poder utilitzar aquesta funció, és important assegurar-se que les Guest Additions estiguin instal·lades i actualitzades al sistema convidat. 
+
+Un cop les Guest Additions estiguin instal·lades, pots habilitar el "drag and drop" des de la finestra de la màquina virtual o utilitzant la línia de comandes de VirtualBox. Aquesta funció et permet transferir fitxers i carpetes entre els dos sistemes de manera senzilla.
+
+En el primer cas el nostre sistema operatiu no suporta el drag and drop perquè no té instal·lat un entorn gràfic.
+Si vols intercanviar fitxer de la maquina virtual a la maquina host pots fer-lo compartint la carpeta com està explicat anteriorment.
+
+També pots intercanviar fitxer a travès de la red. Per exemple, utilitzant el protocol FTP entre altres.
+
+ - Evidència d'ús.
+Per comprovar que la carpeta esta compartida hem creat una carpeta en la carpeta del host i veiem que la carpeta surt en la carpeta compartida de la màquina virtual.
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch04.html#sharedfolders
+https://www.virtualbox.org/manual/ch04.html#guestadd-dnd
+https://www.virtualbox.org/manual/ch04.html#sharedfolders
+
+
+    - Per a què serveixen i com es poden gestionar les instantànies d’una màquina virtual?
+
+Les instantànies d’una màquina serveixen per guardar l’estat d’una màquina virtual. Això permet tenir la capacitat de recuperar un estat guardat prèviament de la màquina virtual.
+Això és molt útil quan estem fent proves (particions noves, comandes, etc) i no volem que l’estat sigui el definitiu degut a que és possible espatllar la màquina.
+
+
+    - Bibliografia.
+
+https://www.virtualbox.org/manual/ch01.html#snapshots
+
+
+    - Com es pot reutilitzar una màquina virtual?
+
+Podem reutilitzar una maquina exportant, clonant o copiant la máquina virtual desitjada.
+L’exportació d’una màquina ens és útil quan volem distribuir la nostre maquina a equips físics diferents. 
+La clonació d’una màquina ens és útil quan volem crear una máquina virtual funcional igual a la nostre maquina virtual base (per exemple si tenim un servidor i volem un altre no cal crear un altre desde cero).
+Finalment podem copiar l’estat de la màquina virtual (instantània) per assegurar-nos un punt segur de l’estat de la nostre màquina virtual (és recomanable realitzar una instantània abans de fer canvis importants a la nostre màquina virtual perque si realitzem alguna acció perillosa podem tornar enrere sense ningun problema).
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch01.html#clone
+
+
+
+
+    - Com es pot arxivar i/o distribuir una màquina virtual?
+
+Es posible distribuir una máquina virtual exportant la maquina virtual desitjada. En el virtualbox anem a l’apartat archivo i exportar servei virtualitzat. Escollim la màquina desitjada i la exportem. Ara mateix tenim un arxiu .ova que es pot compartir/distribuir.
+ 
+Per importar una máquina virtual cal anar a l’apartat archivo i  i importar servei virtualitzat. Escollim l’arxiu i s’importa.
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch01.html#ovf
+
+
+
+    - Com es pot monitorar l'activitat global de les màquines virtuals (ús CPU, RAM i disc)?
+
+En el VirtualBox anem a Maquina-> Herramientas-> actividad i clicant a ->Vision general de actividad,  podem veure l’activitat global de les màquines que estan obertes. 
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch01.html#vm-info
+
+
+
+
+    - Com es pot monitorar l'activitat d'una màquina virtual concreta (ús CPU, RAM i disc)?
+
+En el VirtualBox anem a Maquina-> Herramientas-> actividad podem veure les mètriques de la màquina activa. Si estem monitorant totes les màquines, cliquem a la maquina desitjada i tot seguit a Activitat de MV
+També podem iniciar una MV, i utilitzar la comanda top. 
+
+   - Evidència d'ús.
+Comparant el que ens surt al mirar l’activitat amb el virtual box i amb la comanda top(anar a la Documentacio 2.10 per veure el OUTPUT).
+1. CPU: Veiem que en la virtualBox podem veure la carga de CPU en el invitado(0%) i en la VMM(50%) amb la comanda put només veiem la carga de CPU en el invitat (0%)
+2. RAM: La memoria total amb les dos opcions surt de 960,8. Però la memoria lliure en la VirtualBox surt 837,06 i amb la comanda top 726,0. També hi ha una discrepancia en la memoria utilitzada amb la eina de VirtualBox diu que hi ha 123,73 i amb la comanda top diu que hi ha 240,4. Aquestes variacions pot ser causades per que la comanda top té en compte la memoria utilitzada per caché i buffers i que la eina de VirtualBox no.
+3. Disc: En la eina de virtualBox podem veure que posa Total Escritura: 0B, Total escrito=104,63MB; Total lectura: 0B; Total leido: 342,31MB. Amb la comanda top no surt res del disc.
+
+
+    - Bibliografia.
+https://www.virtualbox.org/manual/ch01.html#vm-info
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+3- Entendre el funcinament de les interfícies de xarxa virtuals.
+
+    - Com es pot connectar l'adaptador virtual de xarxa a les diferents tipologies d'accés a la xarxa?
+
+Pots conectar el adaptador virtual de red a diferentes tipus de acces anant a configuración->RED
+
+No connectat: Aquest mode simula que hi ha una targeta de xarxa present a la màquina virtual, però sense connexió de xarxa. 
+És com si no hi hagués cap cable Ethernet connectat a l'adaptador virtual.
+
+NAT: En aquest mode, la màquina virtual comparteix la direcció IP de l'amfitrió per accedir 
+a la xarxa externa. És útil per navegar per Internet o accedir a recursos externs des de la màquina virtual.
+
+Xarxa NAT: Similar al mode NAT, però amb la capacitat addicional de permetre connexions de sortida des de la xarxa interna 
+de la màquina virtual.
+
+Xarxa pont (Bridged): Aquest mode connecta l'adaptador virtual directament a una targeta de xarxa física de l'amfitrió, 
+permetent que la màquina virtual es comuniqui directament amb la xarxa externa.
+
+Xarxa interna (Internal): Crea una xarxa interna a la qual només poden accedir les màquines virtuals en execució al mateix 
+amfitrió, sense accés a la xarxa externa ni a l'amfitrió.
+
+Xarxa només amfitrió (Host-only): Estableix una xarxa privada entre la màquina virtual i l'amfitrió, sense connexió a la xarxa externa.
+
+Xarxa a la núvol (Cloud networking): Connecta una màquina virtual local a una subxarxa en un servei de núvol remot.
+
+Xarxa genèrica (Generic networking): Modes de xarxa poc comuns que permeten la selecció de controladors de xarxa específics.
+
+
+Com canviar els ports forwarding:
+
+Per canviar la configuració del reenviament de ports a VirtualBox, seguiu les següents instruccions:
+
+1. Obre la configuració de la màquina virtual:
+
+Selecciona la màquina virtual a la llista principal de VirtualBox.
+Fes clic al botó "Configuració".
+Selecciona la pestanya "Xarxa".
+
+2. Selecciona l'adaptador de xarxa:
+
+A la secció "Adaptador de xarxa", selecciona l'adaptador que vols configurar.
+Fes clic al botó "Avançada".
+
+3. Edita la configuració del reenviament de ports:
+
+A la finestra "Configuració avançada de xarxa", selecciona la pestanya "Reenviament de ports".
+Fes clic al botó "Afegir".
+
+4. Introdueix la informació del reenviament de ports:
+
+A la finestra "Afegir regla de reenviament de ports", introdueix la següent informació:
+
+Nom: Un nom descriptiu per a la regla.
+Protocol: El protocol que s'utilitzarà per al reenviament de ports (TCP, UDP o ICMP).
+Port d'amfitrió: El port a l'ordinador amfitrió que es reenviarà.
+Port de la màquina virtual: El port a la màquina virtual que rebrà el tràfic reenviat.
+IP de la màquina virtual: L'adreça IP de la màquina virtual que rebrà el tràfic reenviat.
+
+5. Desa la configuració:
+
+Fes clic al botó "D'acord" per guardar la regla de reenviament de ports.
+Fes clic al botó "D'acord" a la finestra "Configuració avançada de xarxa".
+Fes clic al botó "D'acord" a la finestra "Configuració".
+Reinicia la màquina virtual per aplicar els canvis.
+
+
+
+- Bibliografia
+https://www.virtualbox.org/manual/ch06.html#networking modes
+
+
+
+    - Per a què serveix i com es pot fer una redirecció de ports de l'anfitrió a una interfície virtual?
+
+L'Oracle VM VirtualBox escolta certs ports del host i torna a enviar tots els paquets que hi arriben al convidat, al mateix port o a un altre.
+Per configurar el reenviament de ports, podeu utilitzar l'editor gràfic de reenviament de ports que es pot trobar al diàleg de configuració de 
+xarxa per als adaptadors de xarxa configurats per utilitzar NAT. Aquí, podeu assignar els ports d'amfitrió als ports de convidats per permetre 
+que el trànsit de xarxa s'encamini a un port específic del convidat.
+
+- Bibliografia
+https://www.virtualbox.org/manual/ch06.html#natforward
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+4- Entendre el funcinament de les xarxes virtuals.
+    - Com es configura una xarxa NAT?
+
+Per configurar una xarxa NAT, es pot configurar de la següent forma:
+
+1-> Anem a Herramientas ->Red ->Redes Nat
+2-> Le donem a Crear i posem el nom que vulguem amb el meu cas XARXANAT
+3-> Habilitem el DHCP per tenir una ip autamatica.
+
+Per Connectar-nos a la xarxaNAT fem:
+1-> La màquina seax1-> configuracion->REDNAT->XARXANAT
+2-> I fem el mateix amb seax2
+
+- Evidència d'ús.
+Hem obert las dos màquines fem ip addr en la màquina seax1 y mirem la ip. Amb seax2 fem ping de [ip seax1], veiem que te connectivitat (veure documentació 4.1.txt), també veiem que te connectivitat a google.es(veure documentacio 4.1.2.txt). 
+
+SI les dos màquines les conectem a NAT veiem que no te connectivitat entre elles ja que les IP internes es tradueixen a una mateixa adreça publica(la del host). Però si poden accedir a internet perque aquesta adreça si te connectivitat a internet.(veure documentacio 4.1.3.txt per veure que connectat a NAT té connexió a google.es)
+
+Tant NAT com xarxa NAT tenen conectivitat al host(veure en la documentacio 4.1.4[conectat a NAT] i 4.1.5[conecta a la XARXANAT]
+	
+
+  - Bibliografia
+https://www.virtualbox.org/manual/ch06.html#network_nat_service
+
+
+
+
+    - Com es configura una xarxa interna?
+
+Perquè la màquina es conecti a la mateixa xarxa interna hem de anar a configuracion ->red ->conectat a -> Red interna. I posar el mateix nom de xarxa interna en les dos màquines.
+Tenint les dos maquines en la mateixa xarxa interna podem veure que tenen connexió entre elles, pero no tenen conexio a internet ni a la adreça host.
+
+- Evidència d'ús.
+Evidencia per veure que les maquines tenen connectivitat
+Desde la maquina seax1 fem ping IPseax2. (documentació 4.2.txt)
+Evidencia per veure que la maquina no te conectivitat con el host.
+Fem ping IPHost (documentacio 4.2.1)
+Evidencia per veure que la maquina no te connectivitat a internet.
+Fem ping a google.es i es diu que hi ha un fallo en la reselucion del nombre
+
+
+
+- Bibliografia
+https://www.virtualbox.org/manual/ch06.html#network_internal
+
+
+
+
+    - Quina configuració de xarxa s'estableix en funció de la xarxa on està connectat l'adaptador virtual (adreçament, noms, encaminament, etc)? 
+Identifica els equips involucrats, si n'hi ha. Crea també una taula resum.
+
+
+
+
+
+
+
+
+
+
+
+    - Quin tipus de connectivitat té la màquina virtual (màquines virtuals / equip anfitrió / xarxa externa) en funció de la xarxa on està connectat 
+l'adaptador virtual? Crea també una taula resum.
+
+
+Tenim diferents tipus de connectivitat. En aquesta taula s'explican tots els tipus.
+
+Mode		VM -> HOST	VM <- HOST		VM1 <-> VM2 	VM -> NET/LAN		VM <-> NET/LAN
+
+Host-only	+		+			+		-			-
+Internal	-		-			+		-			-
+Bridged		+		+			+		+			+
+NAT		+		Port forward		-		+			Port forward
+NATservice	+		Port forward		+		+			Port forward
+
++ significa connectivitat
+- significa no connectivitat
+port forward significa connectivitat només mitjançant un port
+
+- Evidència d'ús.
+Adaptador solo anfitrión:
+ -> Prova de que hi ha connectivitat entre màquines virtuals, desde seax1 fem un ping [IP seax2] Anar a documentació 4.4.1.txt
+ -> Prova de que hi ha connectivitat al de VM a host. Fent desde seax1 ping[ip maquina host]. Veiem que no hi ha connexio al fer el ping a la ip generada amb el wi-fi.(Mira en la documentacio 4.4.2.txt). Això és perquè el host-only crea un nou adaptador (com podem veure en 4.4.3.txt fent un ipconfig) veiem que crea el adaptador de ethernet ethernet3 i la MV si te connectivitat a la ip que genera el nou adaptador(com veiem en la foto 4.4.4.txt).
+ -> Prova de que hi ha connectivitat de host a VM. Desde el host fem ping (maquina seax1)(veure documentacio 4.4.5.txt)
+ -> Quan fem ping a google.es posa que hi ha un fallo en la reselucion del nom es a dir no hi ha connexió
+
+Adaptador Internal:  Com hem fet en les proves de la pregunta 4.2
+ -> Desde la maquina seax1 fem ping IPseax2. (documentació 4.2.txt) veiem que te connectivitat
+ -> Desde la maquina seax1 Fem ping IPHost (documentacio 4.2.1) Veiem que no te connectivitat de VM a host ni de host a VM
+ -> Fem ping a google.es i es diu que hi ha un fallo en la reselucion del nombre es a dir no hi ha connexio
+
+Adaptador puente: Primer de tot hem posat les dos màquines conectade a bridge i al mateix adaptador wifi 
+ -> Desde la maquina seax1 fem ping IPseax2(documentació 4.4.6) i veiem que te connectivitat entre VM i VM
+ -> Prova que hi ha connectivitat a internet. Fent ping a google.es(documentació 4.4.7)
+ -> Prova que hi ha connectivitat al host. Fent ping a la maquina host (documentacio 4.4.8
+ -> Prova que el host té connectivitat a la VM. Fent ping a seax1(documentacio 4.4.9)
+
+NAT: Hem vist que te connectivitat de VM -> Host, i que no te connectivitat de VM1 a VM2, te connectivitat de VM a internet en la pregunta 4.1. 
+I per tenir connectivitat de host a la maquina virtual hauriem de canviar el port forwarding. 
+El problema esque en Ping no va per ningun port ja que el ping el que fa es enviar paquets ICMP 
+
+
+- Bibliografia
+https://www.virtualbox.org/manual/ch06.html#networkingmodes
+
+
+
+
+    - Quins equips virtuals i serveis de xarxa incorpora VirtualBox a les xarxes virtuals i quina és la seva funció?
+
+VirtualBox proporciona diversos equips virtuals i serveis de xarxa per a les xarxes virtuals, que permeten una gran flexibilitat a l'hora de configurar la connectivitat de les vostres màquines virtuals. A continuació, es detallen alguns dels més importants:
+
+Adaptadors de xarxa:
+
+Adaptador pont (Bridged): Connecta la màquina virtual a la xarxa física de l'ordinador amfitrió, com si fos un dispositiu independent. Això permet a la màquina virtual comunicar-se amb altres dispositius de la xarxa com si fos un ordinador real.
+
+NAT (Network Address Translation): Crea una xarxa virtual privada per a la màquina virtual i la connecta a Internet a través de l'ordinador amfitrió. Això permet a la màquina virtual accedir a Internet, però no serà visible per a altres dispositius de la xarxa física.
+
+Xarxa interna (Internal Network): Crea una xarxa virtual privada aïllada de la xarxa física i d'Internet. Això permet a les màquines virtuals comunicar-se entre elles, però no amb altres dispositius.
+
+Adaptador "només-amfitrió" (Host-only Network): Crea una xarxa virtual privada accessible només per l'ordinador amfitrió i les màquines virtuals que l'utilitzen. Això permet a les màquines virtuals comunicar-se entre elles i amb l'ordinador amfitrió, però no amb Internet ni amb altres dispositius de la xarxa física.
+Serveis de xarxa:
+
+Servidor DHCP: Assigna automàticament adreces IP a les màquines virtuals de la xarxa.
+Servidor DNS: Tradueix els noms de domini a adreces IP, permetent a les màquines virtuals accedir a recursos web per nom.
+Servidor NAT: Realitza la traducció d'adreces de xarxa, permetent a les màquines virtuals accedir a Internet a través de l'ordinador amfitrió.
+
+
+ - Biliografia
+
+https://www.virtualbox.org/manual/ch06.html#network_nat_service
+

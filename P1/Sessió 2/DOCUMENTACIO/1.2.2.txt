@@ -1,0 +1,1 @@
+Bus 001 Device 003: ID 058f:6387 Alcor Micro Corp. Flash Drive

@@ -1,0 +1,12 @@
+Connected to c6:ed:dc:65:22:b9 (on wlxf02f74746821)
+	SSID: MIWIFI_6hcH
+	freq: 5240
+	RX: 381197 bytes (2314 packets)
+	TX: 3478 bytes (30 packets)
+	signal: -38 dBm
+	rx bitrate: 260.0 MBit/s VHT-MCS 5 80MHz short GI VHT-NSS 1
+	tx bitrate: 292.6 MBit/s VHT-MCS 6 80MHz short GI VHT-NSS 1
+
+	bss flags:	short-preamble short-slot-time
+	dtim period:	2
+	beacon int:	100

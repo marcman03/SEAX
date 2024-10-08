@@ -1,0 +1,70 @@
+19:58:48.224791 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [S], seq 1131073003, win 64240, options [mss 1460,sackOK,TS val 1829919591 ecr 0,nop,wscale 7], length 0
+19:58:48.224809 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [S.], seq 926038355, ack 1131073004, win 65160, options [mss 1460,sackOK,TS val 4209113272 ecr 1829919591,nop,wscale 7], length 0
+19:58:48.225127 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 1, win 502, options [nop,nop,TS val 1829919591 ecr 4209113272], length 0
+19:58:48.225352 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 1:41, ack 1, win 502, options [nop,nop,TS val 1829919592 ecr 4209113272], length 40: SSH: SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u2
+19:58:48.225357 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 41, win 509, options [nop,nop,TS val 4209113272 ecr 1829919592], length 0
+19:58:48.233067 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 1:41, ack 41, win 509, options [nop,nop,TS val 4209113280 ecr 1829919592], length 40: SSH: SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u2
+19:58:48.233384 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 41, win 502, options [nop,nop,TS val 1829919600 ecr 4209113280], length 0
+19:58:48.233734 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 41:1577, ack 41, win 502, options [nop,nop,TS val 1829919600 ecr 4209113280], length 1536
+19:58:48.234135 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 41:1153, ack 1577, win 500, options [nop,nop,TS val 4209113281 ecr 1829919600], length 1112
+19:58:48.282519 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 1153, win 501, options [nop,nop,TS val 1829919649 ecr 4209113281], length 0
+19:58:48.310975 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 1577:2785, ack 1153, win 501, options [nop,nop,TS val 1829919677 ecr 4209113281], length 1208
+19:58:48.324962 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 1153:2717, ack 2785, win 501, options [nop,nop,TS val 4209113372 ecr 1829919677], length 1564
+19:58:48.325316 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 2717, win 500, options [nop,nop,TS val 1829919692 ecr 4209113372], length 0
+19:58:48.350867 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 2785:2801, ack 2717, win 501, options [nop,nop,TS val 1829919717 ecr 4209113372], length 16
+19:58:48.392600 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 2801, win 501, options [nop,nop,TS val 4209113440 ecr 1829919717], length 0
+19:58:48.393066 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 2801:2845, ack 2717, win 501, options [nop,nop,TS val 1829919759 ecr 4209113440], length 44
+19:58:48.393080 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 2845, win 501, options [nop,nop,TS val 4209113440 ecr 1829919759], length 0
+19:58:48.393189 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 2717:2761, ack 2845, win 501, options [nop,nop,TS val 4209113440 ecr 1829919759], length 44
+19:58:48.393499 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 2845:2913, ack 2761, win 501, options [nop,nop,TS val 1829919760 ecr 4209113440], length 68
+19:58:48.399124 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 2761:2813, ack 2913, win 501, options [nop,nop,TS val 4209113446 ecr 1829919760], length 52
+19:58:48.442060 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 2813, win 501, options [nop,nop,TS val 1829919808 ecr 4209113446], length 0
+19:58:49.041040 IP 10.0.2.10.56319 > dns.google.domain: 7316+ PTR? 10.2.0.10.in-addr.arpa. (40)
+19:58:49.068472 IP dns.google.domain > 10.0.2.10.56319: 7316 NXDomain 0/0/0 (40)
+19:58:49.068584 IP 10.0.2.10.41435 > dns.google.domain: 43750+ PTR? 11.2.0.10.in-addr.arpa. (40)
+19:58:49.095906 IP dns.google.domain > 10.0.2.10.41435: 43750 NXDomain 0/0/0 (40)
+19:58:49.916944 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 2913:2997, ack 2813, win 501, options [nop,nop,TS val 1829921284 ecr 4209113446], length 84
+19:58:49.938224 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 2813:2841, ack 2997, win 501, options [nop,nop,TS val 4209114985 ecr 1829921284], length 28
+19:58:49.938497 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 2841, win 501, options [nop,nop,TS val 1829921306 ecr 4209114985], length 0
+19:58:49.938639 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 2997:3109, ack 2841, win 501, options [nop,nop,TS val 1829921306 ecr 4209114985], length 112
+19:58:49.980460 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 3109, win 501, options [nop,nop,TS val 4209115028 ecr 1829921306], length 0
+19:58:50.033570 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 2841:3469, ack 3109, win 501, options [nop,nop,TS val 4209115081 ecr 1829921306], length 628
+19:58:50.064861 IP 10.0.2.10.52991 > dns.google.domain: 60545+ PTR? 8.8.8.8.in-addr.arpa. (38)
+19:58:50.076395 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 3469, win 501, options [nop,nop,TS val 1829921444 ecr 4209115081], length 0
+19:58:50.076409 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 3469:3513, ack 3109, win 501, options [nop,nop,TS val 4209115124 ecr 1829921444], length 44
+19:58:50.076677 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 3513, win 501, options [nop,nop,TS val 1829921444 ecr 4209115124], length 0
+19:58:50.076843 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3109:3229, ack 3513, win 501, options [nop,nop,TS val 1829921444 ecr 4209115124], length 120
+19:58:50.076851 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 3229, win 501, options [nop,nop,TS val 4209115124 ecr 1829921444], length 0
+19:58:50.077262 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 3513:3585, ack 3229, win 501, options [nop,nop,TS val 4209115124 ecr 1829921444], length 72
+19:58:50.077554 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3229:3273, ack 3585, win 501, options [nop,nop,TS val 1829921445 ecr 4209115124], length 44
+19:58:50.077698 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 3585:3941, ack 3273, win 501, options [nop,nop,TS val 4209115125 ecr 1829921445], length 356
+19:58:50.078010 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3273:3341, ack 3941, win 501, options [nop,nop,TS val 1829921445 ecr 4209115125], length 68
+19:58:50.078055 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 3941:4017, ack 3341, win 501, options [nop,nop,TS val 4209115125 ecr 1829921445], length 76
+19:58:50.078554 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3341:3393, ack 4017, win 501, options [nop,nop,TS val 1829921446 ecr 4209115125], length 52
+19:58:50.078609 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4017:4109, ack 3393, win 501, options [nop,nop,TS val 4209115126 ecr 1829921446], length 92
+19:58:50.092620 IP dns.google.domain > 10.0.2.10.52991: 60545 1/0/0 PTR dns.google. (62)
+19:58:50.120667 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4109, win 501, options [nop,nop,TS val 1829921488 ecr 4209115126], length 0
+19:58:51.426913 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3393:3461, ack 4109, win 501, options [nop,nop,TS val 1829922795 ecr 4209115126], length 68
+19:58:51.427036 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4109:4161, ack 3461, win 501, options [nop,nop,TS val 4209116474 ecr 1829922795], length 52
+19:58:51.427270 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4161, win 501, options [nop,nop,TS val 1829922795 ecr 4209116474], length 0
+19:58:51.427351 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3461:3513, ack 4161, win 501, options [nop,nop,TS val 1829922795 ecr 4209116474], length 52
+19:58:51.427481 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4161:4413, ack 3513, win 501, options [nop,nop,TS val 4209116475 ecr 1829922795], length 252
+19:58:51.427788 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3513:3565, ack 4413, win 501, options [nop,nop,TS val 1829922796 ecr 4209116475], length 52
+19:58:51.427829 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4413:4481, ack 3565, win 501, options [nop,nop,TS val 4209116475 ecr 1829922796], length 68
+19:58:51.428125 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3565:3617, ack 4481, win 501, options [nop,nop,TS val 1829922796 ecr 4209116475], length 52
+19:58:51.428188 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4481:4549, ack 3617, win 501, options [nop,nop,TS val 4209116475 ecr 1829922796], length 68
+19:58:51.428524 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3617:3717, ack 4549, win 501, options [nop,nop,TS val 1829922796 ecr 4209116475], length 100
+19:58:51.428588 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4549:4617, ack 3717, win 501, options [nop,nop,TS val 4209116476 ecr 1829922796], length 68
+19:58:51.471812 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4617, win 501, options [nop,nop,TS val 1829922840 ecr 4209116476], length 0
+19:58:53.615954 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3717:3753, ack 4617, win 501, options [nop,nop,TS val 1829924985 ecr 4209116476], length 36
+19:58:53.616292 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4617:4653, ack 3753, win 501, options [nop,nop,TS val 4209118663 ecr 1829924985], length 36
+19:58:53.616566 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4653, win 501, options [nop,nop,TS val 1829924985 ecr 4209118663], length 0
+19:58:53.616612 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [P.], seq 4653:4741, ack 3753, win 501, options [nop,nop,TS val 4209118664 ecr 1829924985], length 88
+19:58:53.616882 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4741, win 501, options [nop,nop,TS val 1829924986 ecr 4209118664], length 0
+19:58:53.616956 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3753:3789, ack 4741, win 501, options [nop,nop,TS val 1829924986 ecr 4209118664], length 36
+19:58:53.616957 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [P.], seq 3789:3849, ack 4741, win 501, options [nop,nop,TS val 1829924986 ecr 4209118664], length 60
+19:58:53.616957 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [F.], seq 3849, ack 4741, win 501, options [nop,nop,TS val 1829924986 ecr 4209118664], length 0
+19:58:53.616977 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [.], ack 3850, win 501, options [nop,nop,TS val 4209118664 ecr 1829924986], length 0
+19:58:53.619498 IP 10.0.2.10.ssh > 10.0.2.11.45008: Flags [F.], seq 4741, ack 3850, win 501, options [nop,nop,TS val 4209118667 ecr 1829924986], length 0
+19:58:53.619899 IP 10.0.2.11.45008 > 10.0.2.10.ssh: Flags [.], ack 4742, win 501, options [nop,nop,TS val 1829924989 ecr 4209118667], length 0
+

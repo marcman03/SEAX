@@ -1,0 +1,6 @@
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:00:00:01 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.10/24 scope global enp0s3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fe00:1/64 scope link 
+       valid_lft forever preferred_lft forever
